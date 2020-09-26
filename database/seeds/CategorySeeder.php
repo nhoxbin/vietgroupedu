@@ -11,7 +11,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('admin_menu')->truncate();
+        // DB::table('admin_menu')->truncate();
         DB::table('admin_menu')->insert([
         	[
         		'parent_id' => 0,
