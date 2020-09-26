@@ -93,9 +93,9 @@
                                 </div>
                                 <div class="col-lg-5 col-md-7 col-12">
                                     <div class="header-top-right">
-                                        <div class="content"><a href="#">Vietnamese</a></div>
+                                        {{-- <div class="content"><a href="#">Vietnamese</a></div>
                                         <div class="content"><a href="#">Japanese</a></div>
-                                        <div class="content"><a href="#">English</a></div>
+                                        <div class="content"><a href="#">English</a></div> --}}
                                     </div>
                                 </div>
                             </div>
