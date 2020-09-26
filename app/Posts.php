@@ -10,9 +10,9 @@ class Posts extends Model
     public static function boot() {
 		parent::boot();
 
-		static::created(function($cate) {
-			$cate->slug = Str::slug($cate->title) . '-' . $cate->id;
-			$cate->save();
+		static::created(function($post) {
+			$post->slug = Str::slug($post->title) . '-' . $post->id;
+			$post->save();
 		});
 	}
 

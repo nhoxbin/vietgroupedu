@@ -13,6 +13,7 @@ use Encore\Admin\Layout\Column;
 use Encore\Admin\Layout\Row;
 use Encore\Admin\Widgets\Box;
 use Encore\Admin\Tree;
+use Illuminate\Support\Str;
 
 class CategoryController extends AdminController
 {
@@ -34,7 +35,6 @@ class CategoryController extends AdminController
                     $menuModel = Category::class;
                     $form->select('parent_id', trans('admin.parent_id'))->options($menuModel::selectOptions());
                     $form->text('title', __('Tên danh mục'));
-                    $form->image('image', __('Image'));
                     $form->setWidth(9, 3);
                     $column->append(new Box(trans('admin.new'), $form));
                 });
@@ -88,8 +88,6 @@ class CategoryController extends AdminController
 
         $show->field('title', __('Tên'));
         $show->field('slug', __('Slug'));
-        $show->field('image', __('Image'));
-        $show->field('parent_id', __('Parent id'));
 
         return $show;
     }
@@ -97,9 +95,10 @@ class CategoryController extends AdminController
     public function form() {
         $cateModel = Category::class;
         $form = new Form(new $cateModel());
-        $form->select('parent_id', trans('admin.parent_id'))->options($cateModel::selectOptions());
-        $form->text('title', trans('admin.title'))->rules('required');
-        $form->image('image', trans('admin.image'));
+        $form->select('parent_id', 'Danh mục cha')->options($cateModel::selectOptions());
+        $form->text('title', 'Tiêu đề')->rules('required');
+        $form->text('slug', 'Slug');
+
         return $form;
     }
 }

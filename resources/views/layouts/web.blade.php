@@ -121,32 +121,23 @@
                                         <div class="mainmenu d-none d-lg-block">
                                             <nav>
                                                 <ul id="nav" class="border-full border-top">
-                                                    <li class="current"><a href="/">Trang Chủ</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="index.html">Slider Style 1</a></li>
-                                                            <li><a href="index-2.html">Slider Style 2</a></li>
-                                                            <li><a href="index-3.html">Background Image</a></li>
-                                                            <li><a href="index-4.html">Image Overlay Light</a></li>
-                                                            <li><a href="index-5.html">Image Overlay Dark</a></li>
-                                                            <li><a href="index-6.html">Menu With Slider</a></li>
-                                                            <li><a href="index-7.html">Menu With Image</a></li>
-                                                            <li><a href="index-8.html">Menu With Overlay</a></li>
-                                                            <li><a href="index-9.html">Video Background</a></li>
-                                                            <li><a href="index-10.html">Fixed Image</a></li>
-                                                            <li><a href="index-11.html">Overlay Fixed Image</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="about.html">Giới thiệu</a></li>
+                                                    <li class="current"><a href="/">Trang Chủ</a></li>
+                                                    <li><a href="{{ url('/gioi-thieu') }}">Giới thiệu</a></li>
                                                     <li><a href="courses.html">Dịch vụ</a>
                                                         <ul class="sub-menu">
-                                                            <li><a href="courses-details.html">Courses Details</a></li>
+                                                            <li><a href="{{ url('/xuat-khau-lao-dong') }}">Xuất khẩu lao động</a></li>
+                                                            <li><a href="{{ url('/du-hoc') }}">Du học</a></li>
+                                                            <li><a href="{{ url('/dao-tao-ngoai-ngu') }}">Đào tạo ngoại ngữ</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Thông báo</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="{{ url('/tin-tuc') }}">Tin tức</a></li>
+                                                            <li><a href="{{ url('/su-kien') }}">Sự kiện</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ url('event') }}">Tin tức & Sự kiện</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ url('contact') }}">Liên hệ</a>
+                                                        <a href="{{ url('/contact') }}">Liên hệ</a>
                                                     </li>
                                                 </ul>
                                             </nav>

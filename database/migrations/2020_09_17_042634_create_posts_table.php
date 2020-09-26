@@ -17,13 +17,11 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->unsignedInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
-            $table->unsignedTinyInteger('post_type_id');
-            $table->foreign('post_type_id')->references('id')->on('post_types')->onUpdate('cascade');
             $table->string('title');
             $table->string('picture');
-            $table->string('slug')->unique();
-            $table->unsignedDecimal('income', 2);
-            $table->date('date_interview'); // interview = phỏng vấn
+            $table->string('slug')->nullable()->unique();
+            $table->unsignedDecimal('income', 15, 2);
+            $table->date('interview'); // interview = phỏng vấn
             $table->string('work_place');
             $table->text('description');
             $table->timestamps();

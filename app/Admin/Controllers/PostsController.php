@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
 
 class PostsController extends AdminController
 {
@@ -20,9 +21,11 @@ class PostsController extends AdminController
         // $grid->column('category_id', __('Category id'));
         $grid->column('title', __('Tiêu đề'));
         $grid->column('picture', __('Hình ảnh'))->display(function ($img) {
-            return "<img src='/".url('storage/' . $img)."' />";
-        });;
-        $grid->column('created_at', __('Tạo lúc'));
+            return "<img src='".url('storage/' . $img)."' height='100px' />";
+        });
+        $grid->column('created_at', __('Tạo lúc'))->display(function ($created_at) {
+            return date('d-m-Y h:i:s', strtotime($created_at));
+        });
 
         return $grid;
     }
@@ -36,7 +39,7 @@ class PostsController extends AdminController
         });
         $show->field('id', __('Id bài viết'));
         $show->field('title', __('Title'));
-        $show->image('picture', __('Hình ảnh'));
+        $show->field('im')->avatar()->image();
         $show->field('slug', __('Slug'));
         $show->date('created_at', __('Created at'));
         $show->date('updated_at', __('Updated at'));
@@ -48,13 +51,11 @@ class PostsController extends AdminController
         $form = new Form(new Posts());
 
         $menuModel = Category::class;
-        $cate = collect($menuModel::selectOptions());
-        // $cate->shift();
-        $form->select('category_id', __('Danh mục'))->options($cate)->rules("required");
+        $form->select('category_id', __('Danh mục'))->options($menuModel::selectOptions())->rules("required");
         $form->text('title', __('Tiêu đề'))->rules("required|string");
-        $form->image('picture', __('Hình ảnh'))->move(request()->input('title'))->rules("required|image");
+        $form->image('picture', __('Hình ảnh'))->uniqueName()->rules("required|image");
         $form->currency('income', __('Thu nhập'))->rules("required");
-        $form->date('date_interview', __('Ngày phỏng vấn'))->rules("required|date");
+        $form->date('interview', __('Ngày phỏng vấn'))->rules("required|date");
         $form->text('work_place', __('Nơi làm việc'))->rules("required|string");
         $form->ckeditor('description')->rules("required");
 

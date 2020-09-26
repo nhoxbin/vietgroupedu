@@ -20,23 +20,16 @@ class CategorySeeder extends Seeder
         		'icon' => 'fa-code-fork',
         		'uri' => 'categories'
         	],
-            [
-                'parent_id' => 0,
-                'order' => 9,
-                'title' => 'Loại bài viết',
-                'icon' => 'fa-asterisk',
-                'uri' => 'post-types'
-            ],
         	[
         		'parent_id' => 0,
-        		'order' => 10,
+        		'order' => 9,
         		'title' => 'Bài viết',
         		'icon' => 'fa-pencil-square-o',
         		'uri' => 'posts'
         	],
             [
                 'parent_id' => 0,
-                'order' => 11,
+                'order' => 10,
                 'title' => 'File Manager',
                 'icon' => 'fa-pencil-square-o',
                 'uri' => 'file-manager'

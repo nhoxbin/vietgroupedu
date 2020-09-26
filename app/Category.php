@@ -16,8 +16,6 @@ class Category extends Model
 	protected $fillable = ['parent_id', 'order', 'title'];
 
 	public static function boot() {
-		parent::boot();
-
         static::treeBoot();
 
 		static::created(function($cate) {
