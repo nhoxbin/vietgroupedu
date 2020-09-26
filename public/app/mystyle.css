@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+* {
+	font-family: 'Avenir Next', 'Trebuchet MS', Tahoma, sans-serif;
+}
+
+body {
+	/* font-weight: 400;
+	min-height: 100vh; */
+	letter-spacing: 0.5px;
+}
+
+#nivoslider img {
+	max-height: 650px;
+}
+
+.section-title h3 {
+	line-height: 35px;
+}
+
+a.phone-call {
+	color: #fff;
+}
+
+a.phone-call:hover {
+	color: #2e3f51;
+}
+
+.background-area .banner-logo {
+	width: 1920px;
+	height: 600px;
+}
+
+.logo img {
+	height: 60px;
+}
+
+.text-logo {
+	font-weight: 1000;
+}
+
+.text-logo .text-1 {
+	position: relative;
+	color: #1980fd;
+}
+
+.text-logo .text-1:after {
+	position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #1980fd;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+}
+
+.text-logo .text-2 {
+	position: relative;
+	color: #91D642;
+}
+
+.text-logo .text-2:after {
+	position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #91D642;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.text-logo .text-3 {
+	position: relative;
+	color: #FF8B00;
+}
+
+.text-logo .text-3:after {
+	position: absolute;
+    content: '';
+    height: 2px;
+    background-color: #FF8B00;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+}
+
+.footer-logo img {
+	height: 50px;
+}
+
+.about-area {
+    background: rgba(0, 0, 0, 0) url("img/banner/japan.jpg") no-repeat 0 0 / cover;
+}
+
+.about-area p {
+    color: #6f0f0f;
+    font-size: 1.1em;
+}
+
+.about-area h3 {
+	/* background-color: #FFE6E4; */
+	/* color: #000; */
+	margin-bottom: 60px;
+}
+
+.white .section-title h3, .white .section-title p {
+	color: #bf0c0c;
+}
+
+.single-product-image img {
+	height: 400px;
+}
+
+.testimonial-area {
+	background: rgba(0, 0, 0, 0) url(img/testimonial/service-06.jpg) no-repeat fixed 0 0 / cover;
+}
+
+.newsletter-area:after {
+    border-width: 74px 40px;
+    top: -20px;
+}
+
+#scrollUp {
+    bottom: 120px;
+    right: 30px;
+}
