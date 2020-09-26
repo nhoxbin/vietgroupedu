@@ -9,7 +9,7 @@ Route::get('/{name?}', 'HomeController@index')->where('name', 'home')->name('hom
 Route::group(['prefix' => 'artisan/{password}'], function() {
     Route::get('{command}', function($password, $command) {
 		if ($password === 'buudaica') {
-	        $exitCode = \Artisan::call($command, ['--force' => true]);
+	        $exitCode = \Artisan::call($command, []);
 	        echo $exitCode;
 		}
     });
