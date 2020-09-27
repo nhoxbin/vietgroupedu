@@ -4,10 +4,42 @@
 	font-family: 'Avenir Next', 'Trebuchet MS', Tahoma, sans-serif;
 }
 
+@font-face {
+    font-family: 'montserratbold';
+    src: url('fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+         url('fonts/AvenirNext-DemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/AvenirNext-Medium.woff2') format('woff2'),
+         url('fonts/AvenirNext-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/AvenirNext-Regular.woff2') format('woff2'),
+         url('fonts/AvenirNext-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratsemi_bold';
+    src: url('fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+         url('fonts/AvenirNext-DemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	/* font-weight: 400;
 	min-height: 100vh; */
-	letter-spacing: 0.5px;
+	/* letter-spacing: 0.5px; */
 }
 
 #nivoslider img {
