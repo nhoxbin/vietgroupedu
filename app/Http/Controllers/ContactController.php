@@ -20,7 +20,8 @@ class ContactController extends Controller
             'message' =>  'required'
         ]);
         $data = array(
-            'email'      => $request->email,
+            'email'     => $request->email,
+            'phone'     => $request->phone,
             'name'      => $request->name,
             'message'   => $request->message
         );
