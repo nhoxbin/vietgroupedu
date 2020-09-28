@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-* {
-	font-family: 'Avenir Next', 'Trebuchet MS', Tahoma, sans-serif;
-}
-
 @font-face {
     font-family: 'montserratbold';
     src: url('fonts/AvenirNext-DemiBold.woff2') format('woff2'),
@@ -36,14 +32,8 @@
     font-style: normal;
 }
 
-body {
-	/* font-weight: 400;
-	min-height: 100vh; */
-	/* letter-spacing: 0.5px; */
-}
-
-#nivoslider img {
-	max-height: 650px;
+#slider img {
+	max-height: 550px;
 }
 
 .section-title h3 {

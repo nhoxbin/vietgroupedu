@@ -2,7 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Auth::routes(['register' => false, 'verify' => false]);
+Route::resource('lien-he', 'ContactController', [
+	'names' => 'contact',
+	'only' => ['index', 'store']
+]);
+
+Auth::routes(['login' => false, 'register' => false, 'verify' => false]);
 
 Route::get('/{name?}', 'HomeController@index')->where('name', 'home')->name('home');
 
