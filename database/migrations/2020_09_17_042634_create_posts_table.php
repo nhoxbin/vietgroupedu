@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('picture')->nullable();
             $table->string('slug')->nullable()->unique();
             $table->text('description');
-            $table->json('fields')->nullable(); // order: interview, expired, income, work_place
+            $table->text('fields'); // order: interview, expired, income, work_place
             $table->timestamps();
         });
     }
