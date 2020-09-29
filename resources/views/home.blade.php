@@ -5,7 +5,10 @@
         <div class="preview-2">
             <div id="slider" class="nivoSlider">
                 <img src="/app/img/slider/1.jpg" alt="" title="#slider-1-caption1"/>
-                {{-- <img src="/app/img/slider/4.jpg" alt="" title="#slider-1-caption2"/> --}}
+                <img src="/app/img/slider/z2099809307059_be54a9c8b246e07b2e9d7b721d82c9c0.jpg" alt="" title="#slider-1-caption2"/>
+                <img src="/app/img/slider/z2099809310051_7afb3f1d6b754009c86546d4f544205f.jpg" alt="" title="#slider-1-caption3"/>
+                <img src="/app/img/slider/z2099809310052_cddddec10e84082e578407f01cc1ce3e.jpg" alt="" title="#slider-1-caption4"/>
+                <img src="/app/img/slider/z2099809310053_921d931654c784d0b12a2f1a18c4acb4.jpg" alt="" title="#slider-1-caption5"/>
             </div>
             <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
                 <div class="banner-content slider-1">

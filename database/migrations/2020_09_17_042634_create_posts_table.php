@@ -25,6 +25,7 @@ class CreatePostsTable extends Migration
             $table->date('expired'); // hạn nộp hồ sơ
             $table->string('work_place');
             $table->text('description');
+            $table->json('fields');
             $table->timestamps();
         });
     }

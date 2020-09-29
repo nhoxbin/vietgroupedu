@@ -259,7 +259,7 @@
                                             </h4>
                                         </a>
                                     </div>
-                                    <p>There are many variations of passg of Lorem Ipsum available, but thmajority have suffered altem, </p>
+                                    <p style="font-weight: bold; color: orange; font-size: 22px; font-family: emoji">VỮNG BƯỚC VƯƠN XA</p>
                                     <div class="social-icons">
                                         <a href="https://www.facebook.com/VietgroupEdu/"><i class="zmdi zmdi-facebook"></i></a>
                                         <a href="#"><i class="zmdi zmdi-instagram"></i></a>
@@ -287,10 +287,10 @@
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="single-footer-widget">
                                     <h3 style="font-size: 1.5em">C.Ty Vietgroup Edu tại Nhật</h3>
-                                    <a href="tel:02862-705-057"><i class="fa fa-phone"></i>02862-705-057</a>
+                                    <a href="tel:080-7348-6789"><i class="fa fa-phone"></i>080-7348-6789</a>
                                     <span><i class="fa fa-envelope"></i>info@vietgroupedu.com</span>
                                     <span><i class="fa fa-globe"></i>{{ url('/') }}</span>
-                                    <span><i class="fa fa-map-marker"></i>33 đường Bùi Quang Là, P.12, Q.Gò Vấp, TP.HCM</span>
+                                    <span><i class="fa fa-map-marker"></i>Prestige k2-101, 2074-24 Hiharu, Thành phố Kumagaya, Tỉnh Saitama</span>
                                 </div>
                             </div>
                         </div>

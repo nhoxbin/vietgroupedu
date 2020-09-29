@@ -23,7 +23,7 @@
                     	@csrf
                         <div class="row">
                             <div class="col-md-4">
-                                <input type="text" name="name" placeholder="Tên" required>
+                                <input type="text" name="name" placeholder="Họ và tên" required>
                             </div>
                             <div class="col-md-4">
                                 <input type="email" name="email" placeholder="Địa chỉ Email" required>
