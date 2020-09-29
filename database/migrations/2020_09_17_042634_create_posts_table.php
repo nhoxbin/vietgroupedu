@@ -20,12 +20,8 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('picture')->nullable();
             $table->string('slug')->nullable()->unique();
-            $table->unsignedDecimal('income', 15, 2);
-            $table->date('interview'); // interview = phỏng vấn
-            $table->date('expired'); // hạn nộp hồ sơ
-            $table->string('work_place');
             $table->text('description');
-            $table->json('fields');
+            $table->json('fields'); // order: interview, expired, income, work_place
             $table->timestamps();
         });
     }
