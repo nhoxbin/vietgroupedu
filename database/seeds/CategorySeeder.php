@@ -26,14 +26,7 @@ class CategorySeeder extends Seeder
         		'title' => 'Bài viết',
         		'icon' => 'fa-pencil-square-o',
         		'uri' => 'posts'
-        	],
-            [
-                'parent_id' => 0,
-                'order' => 10,
-                'title' => 'File Manager',
-                'icon' => 'fa-folder-open-o',
-                'uri' => 'file-manager'
-            ]
+        	]
         ]);
     }
 }

@@ -396,13 +396,8 @@ return [
     |
     */
     'extensions' => [
-        
-        'material-ui' => [
-            'enable' => false
-        ],
-
-        'file-manager' => [
-           'disk' => 'public'
+        'media-manager' => [
+            'disk' => 'public'
         ],
 
         'ckeditor' => [
