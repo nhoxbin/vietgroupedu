@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function index() {
-    	return view('contact');
-    }
-
     public function store(Request $request) {
         $this->validate($request, [
             'name'     =>  'required',
@@ -19,19 +15,14 @@ class ContactController extends Controller
             'phone'  =>  'required|regex:/^\d{10}$/i',
             'message' =>  'required'
         ]);
-        $data = array(
-            'email'     => $request->email,
-            'phone'     => $request->phone,
-            'name'      => $request->name,
-            'message'   => $request->message
-        );
+        $data = $request->input('name', 'email', 'phone', 'message');
         try {
             Mail::to(config('mail.mailers.smtp.username'))->send(new SendMail($data));
         } catch(\Exeption $e) {
             return response('Fail to send Mail!', 500);
         }
         if ($request->ajax()) {
-        	return response('Thank you for contact us!', 200);
+        	return response(['message' => 'Thank you for contact us!'], 200);
         }
         return back()->with('success', 'Thank you for contact us!');
     }

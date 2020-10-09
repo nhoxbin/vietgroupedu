@@ -2,31 +2,36 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 
 class Posts extends Model
 {
-    public static function boot() {
-		parent::boot();
+	use Sluggable;
 
-		static::created(function($post) {
-			$post->slug = Str::slug($post->title) . '-' . $post->id;
-			$post->save();
-		});
-	}
+	public function sluggable() {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
 
-	public function setPicturesAttribute($pictures) {
+	/*public function setPicturesAttribute($pictures) {
 	    if (is_array($pictures)) {
 	        $this->attributes['pictures'] = json_encode($pictures);
 	    }
-	}
+	}*/
 
-	public function getPicturesAttribute($pictures) {
+	/*public function getPicturesAttribute($pictures) {
 	    return json_decode($pictures, true);
-	}
+	}*/
 
 	public function category() {
 		return $this->belongsTo('App\Category');
+	}
+
+	public function field() {
+		return $this->hasOne('App\PostField', 'post_id');
 	}
 }

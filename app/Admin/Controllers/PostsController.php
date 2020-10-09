@@ -4,7 +4,9 @@ namespace App\Admin\Controllers;
 
 use App\Category;
 use App\Posts;
+use App\PostField;
 use Encore\Admin\Controllers\AdminController;
+use Encore\Admin\Layout\Content;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
@@ -16,48 +18,65 @@ class PostsController extends AdminController
 
     protected function grid() {
         $grid = new Grid(new Posts());
+        $grid->disableExport();
 
-        $grid->column('id', __('Id'));
-        // $grid->column('category_id', __('Category id'));
+        $grid->quickSearch('title');
+        $grid->column('category.title', __('Danh mục'));
         $grid->column('title', __('Tiêu đề'));
         $grid->column('picture', __('Hình ảnh'))->display(function ($img) {
             return "<img src='".url('storage/' . $img)."' height='100px' />";
         });
-        $grid->column('created_at', __('Tạo lúc'))->display(function ($created_at) {
-            return date('d-m-Y h:i:s', strtotime($created_at));
-        });
+        $grid->created_at('created_at', __('Tạo lúc'))
+             ->sortable()
+             ->display(function ($created_at) {
+                return date('d-m-Y h:i:s', strtotime($created_at));
+            });
 
         return $grid;
     }
 
     protected function detail($id) {
         $show = new Show(Posts::findOrFail($id));
-
-        $menuModel = Category::class;
-        $show->category('Danh mục', function($category) {
-            $category->title();
-        });
-        $show->field('id', __('Id bài viết'));
-        $show->field('title', __('Title'));
-        $show->field('im')->avatar()->image();
-        $show->field('slug', __('Slug'));
-        $show->date('created_at', __('Created at'));
-        $show->date('updated_at', __('Updated at'));
+        $show->field('category.parents_tree', __('Tiêu đề danh mục'));
+        $show->field('title', __('Tiêu đề'));
+        $show->field('keywords', __('Tags'));
+        $show->field('picture', __('Hình ảnh'))->avatar()->image();
+        $show->field('description', __('Mô tả'));
 
         return $show;
     }
 
-    protected function form() {
+    public function edit($id, Content $content) {
+        return $content->body($this->form($id)->edit($id));
+    }
+
+    protected function form($id = null) {
         $form = new Form(new Posts());
 
         $menuModel = Category::class;
-        $form->select('category_id', __('Danh mục'))->options($menuModel::selectOptions())->rules("required");
+        $form->select('category_id', __('Danh mục'))
+             ->options($menuModel::selectOptions())
+             ->rules("required");
         $form->text('title', __('Tiêu đề'))->rules("required|string");
-        $form->image('picture', __('Hình ảnh'))->uniqueName()->rules("required|image");
-        $form->currency('income', __('Thu nhập'))->rules("required");
-        $form->date('interview', __('Ngày phỏng vấn'))->rules("required|date");
-        $form->text('work_place', __('Nơi làm việc'))->rules("required|string");
-        $form->ckeditor('description')->rules("required");
+        $form->image('picture', __('Hình ảnh'))
+             ->uniqueName()
+             ->rules("required|image");
+        $form->tags('keywords', __('Từ khóa'))->rules("required");
+        $form->ckeditor('description', __('Mô tả'))->rules("required");
+        $form->datetime('created_at', 'Tạo lúc')->rules("required");
+        $form->datetime('updated_at', __('Cập nhật lúc'))->rules("required");
+
+        $form->radio('type', 'Loại')
+            ->options([
+                0 => 'Bài viết',
+                1 => 'Đơn hàng',
+            ])->when(1, function (Form $form) {
+
+                $form->currency('field.income', __('Thu nhập'))->rules("required");
+                $form->text('field.work_place', __('Nơi làm việc'))->rules("required");
+                $form->dateRange('field.interview', 'field.expired', 'Ngày')->rules("required");
+
+            })->default('0');
 
         return $form;
     }

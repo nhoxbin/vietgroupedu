@@ -15,14 +15,20 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
+            $table->unsignedInteger('category_id')
+                  ->nullable()
+                  ->constrained('categories')
+                  ->onDelete('set null')
+                  ->onUpdate('cascade');
+            $table->boolean('type')->comment('0: bài viết, 1: đơn hàng');
             $table->string('title');
             $table->string('picture')->nullable();
-            $table->string('slug')->nullable()->unique();
+            $table->string('slug')->nullable();
+            $table->text('keywords')->nullable();
             $table->text('description');
-            $table->text('fields'); // order: interview, expired, income, work_place
             $table->timestamps();
+
+            $table->unique(['category_id', 'slug']);
         });
     }
 

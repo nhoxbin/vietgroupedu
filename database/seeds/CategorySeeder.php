@@ -31,7 +31,7 @@ class CategorySeeder extends Seeder
                 'parent_id' => 0,
                 'order' => 10,
                 'title' => 'File Manager',
-                'icon' => 'fa-pencil-square-o',
+                'icon' => 'fa-folder-open-o',
                 'uri' => 'file-manager'
             ]
         ]);
