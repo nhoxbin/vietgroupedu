@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ __('page.'.request()->segment(1)) ?? 'Trang chủ' }} || {{ config('app.name', 'Laravel') }}</title>
+        <title>{{ (isset($page) ? __('page.'.$page) : 'Trang chủ') . ' || ' . config('app.name', 'Laravel') }}</title>
         <meta property="og:locale" content="vi_VN">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         <meta name="description" content="VietGroupEdu l&#224; c&#244;ng ty TƯ VẤN - Đ&#192;O TẠO - CUNG ỨNG thực tập sinh, kỹ sư l&#224;m việc tại Nhật Bản. Lu&#244;n kh&#244;ng ngừng ho&#224;n thiện trong c&#225;c dịch vụ cung cấp nh&#226;n lực, phấn đấu v&#224; kh&#244;ng ngừng t&#236;m kiếm c&#225;c cơ hội tốt hơn cho người lao động Việt Nam.">
@@ -15,10 +15,6 @@
 		<!-- Google Fonts
 		============================================ -->		
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet' type='text/css'>
-        
-		<!-- Color Swithcer CSS
-		============================================ -->
-        <!-- <link rel="stylesheet" href="css/color-switcher.css"> -->
         
 		<!-- Fontawsome CSS
 		============================================ -->
@@ -53,10 +49,6 @@
         <!-- App Vue Styles
         ============================================ -->
         <link href="{{ asset('css/app.css') }}?t=<?= time() ?>" rel="stylesheet">
-
-		<!-- Modernizr JS
-		============================================ -->		
-        <script src="/app/js/vendor/modernizr-2.8.3.min.js"></script>
 	    
         <!-- Color Css Files
 		============================================ -->	
@@ -96,14 +88,21 @@
             <!--End of Bg White-->
         </div>
         <!--End of Main Wrapper Area-->
-        
+
+        {{-- this line use for not to conflict slider --}}
+        @if(request()->path() != '/')
+            <!-- App Vue Scripts
+            ============================================ -->
+            <script src="{{ asset('js/app.js') }}?t=<?= time() ?>" defer></script>
+        @endif
+
+        <!-- Modernizr JS
+        ============================================ -->        
+        <script src="/app/js/vendor/modernizr-2.8.3.min.js"></script>
+
 		<!-- jquery
 		============================================ -->
         <script src="/app/js/vendor/jquery-1.12.4.min.js"></script>
-        
-        <!-- App Vue Scripts
-        ============================================ -->
-        <script src="{{ asset('js/app.js') }}?t=<?= time() ?>" defer></script>
 
 		<!-- popper JS
 		============================================ -->
@@ -117,6 +116,9 @@
 		============================================ -->
         <script src="/app/js/ajax-mail.js"></script>
         
+        <script src="/app/js/vendor/jquery.nivo.slider.js"></script>
+        <script src="/app/js/vendor/jquery.nivo.slider.pack.js"></script>
+
 		<!-- plugins JS
 		============================================ -->
         <script src="/app/js/plugins.js"></script>
@@ -128,5 +130,7 @@
 		<!-- main JS
 		============================================ -->
         <script src="/app/js/main.js"></script>
+
+        
     </body>
 </html>

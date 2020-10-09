@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function __invoke($page) {
-    	return view($page);
+    	return view($page, compact('page'));
     }
 }

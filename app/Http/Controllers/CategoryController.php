@@ -13,7 +13,7 @@ class CategoryController extends Controller
 		$categories = explode('/', $categories);
     	$last_slug = array_pop($categories);
         $cate = Category::where('slug', $last_slug)->firstOrFail();
-    	if ($request->ajax()) {
+    	if ($request->expectsJson()) {
         	return response(new CategoryResource($cate));
         }
         return view('posts.index', compact('cate'));

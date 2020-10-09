@@ -25,7 +25,7 @@ export default {
   },
 
   mounted() {
-    axios.get(route('categories.posts.index', this.slug)).then(({data}) => {
+    axios.get(route('api.categories.index', this.slug)).then(({data}) => {
       this.children = data.children;
     });
   }
