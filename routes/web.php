@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::group(['prefix' => 'artisan/{password}'], function() {
+    Route::get('{command}', function($password, $command) {
+		if ($password === 'buudaica') {
+	        $exitCode = \Artisan::call($command, []);
+	        echo $exitCode;
+		}
+    });
+});
+
 Route::get('{page}', 'PageController')
 	 ->name('page')
 	 ->where('page', 'lien-he|gioi-thieu');
@@ -16,12 +25,3 @@ Route::get('{categories}', 'CategoryController@index')
 	 ->name('categories.posts.index');
 
 Route::get('{name?}', 'HomeController@index')->where('name', 'home')->name('home');
-
-Route::group(['prefix' => 'artisan/{password}'], function() {
-    Route::get('{command}', function($password, $command) {
-		if ($password === 'buudaica') {
-	        $exitCode = \Artisan::call($command, []);
-	        echo $exitCode;
-		}
-    });
-});
