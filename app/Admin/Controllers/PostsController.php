@@ -21,7 +21,7 @@ class PostsController extends AdminController
         $grid->disableExport();
 
         $grid->quickSearch('title');
-        $grid->column('category.title', __('Danh mục'));
+        $grid->column('parent.title', __('Danh mục'));
         $grid->column('title', __('Tiêu đề'));
         $grid->column('picture', __('Hình ảnh'))->display(function ($img) {
             return "<img src='".url('storage/' . $img)."' height='100px' />";
@@ -37,7 +37,7 @@ class PostsController extends AdminController
 
     protected function detail($id) {
         $show = new Show(Posts::findOrFail($id));
-        $show->field('category.parents_tree', __('Tiêu đề danh mục'));
+        $show->field('parent.parents_tree', __('Tiêu đề danh mục'));
         $show->field('title', __('Tiêu đề'));
         $show->field('keywords', __('Tags'));
         $show->field('picture', __('Hình ảnh'))->avatar()->image();

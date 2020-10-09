@@ -17,18 +17,20 @@ class Posts extends Model
         ];
     }
 
-	/*public function setPicturesAttribute($pictures) {
-	    if (is_array($pictures)) {
-	        $this->attributes['pictures'] = json_encode($pictures);
-	    }
-	}*/
+	public function getParentsTree($post, $name) {
+		if ($post->category_id == null && $post->parent_id == null)
+            return $name;
+        
+        $name = $post->parent->slug . '/' . $name;
+        return $this->getParentsTree($post->parent, $name);
+	}
 
-	/*public function getPicturesAttribute($pictures) {
-	    return json_decode($pictures, true);
-	}*/
+	function getParentsTreeAttribute() {
+        return $this->getParentsTree($this, $this->slug);
+    }
 
-	public function category() {
-		return $this->belongsTo('App\Category');
+	public function parent() {
+		return $this->belongsTo('App\Category', 'category_id');
 	}
 
 	public function field() {

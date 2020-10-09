@@ -27,7 +27,7 @@
 	                                    <span>Tag:</span>
 	                                    <ul class="tags">
 											@foreach(explode(',', $post->keywords) as $k)
-	                                        	<li><a href="#">design,</a></li>
+	                                        	<li><a href="#">{{ $k }},</a></li>
 	                                       	@endforeach
 	                                    </ul>
 	                                </div>
@@ -42,48 +42,10 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="comments">
+                    <div class="comments">
                         <h4 class="title">Comments</h4>
-                        <div class="single-comment">
-                            <div class="author-image">
-                                <img src="img/comment/1.jpg" alt="">
-                            </div>
-                            <div class="comment-text">
-                                <div class="author-info">
-                                    <h4><a href="#">MD Tokdir Ali</a></h4>
-                                    <span class="reply"><a href="#">Reply</a></span>
-                                    <span class="comment-time">Posted on Jun 12, 2015 /</span>
-                                </div>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered aation in some form, by injected humour,</p>
-                            </div>
-                        </div>
-                        <div class="single-comment comment-reply">
-                            <div class="author-image">
-                                <img src="img/comment/2.jpg" alt="">
-                            </div>
-                            <div class="comment-text">
-                                <div class="author-info">
-                                    <h4><a href="#">MD Kopal Ali</a></h4>
-                                    <span class="reply"><a href="#">Reply</a></span>
-                                    <span class="comment-time">Posted on Jun 12, 2015 /</span>
-                                </div>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered aation in some form, by injected humour,</p>
-                            </div>
-                        </div>
-                        <div class="single-comment">
-                            <div class="author-image">
-                                <img src="img/comment/3.jpg" alt="">
-                            </div>
-                            <div class="comment-text">
-                                <div class="author-info">
-                                    <h4><a href="#">MR Soytan Ali</a></h4>
-                                    <span class="reply"><a href="#">Reply</a></span>
-                                    <span class="comment-time">Posted on Jun 12, 2015 /</span>
-                                </div>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered aation in some form, by injected humour,</p>
-                            </div>
-                        </div>
-                    </div> --}}
+                        <div class="fb-comments" data-href="{{ url()->current() }}" data-numposts="5" data-width="100%"></div>
+                    </div>
                 </div>    
             </div>
             <div class="col-lg-3 col-md-12 col-12">
@@ -137,32 +99,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="single-sidebar-widget comment">
-                        <h4 class="title">Recent Comment</h4>
-                        <div class="recent-content">
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/comment/3.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">MR Soytan Ali</a></h4>
-                                    <p>There are many varia passages of Lorem Ipsuable,amar sonar</p>
-                                </div>
-                            </div>
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/comment/1.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">MD Tokdir  Ali</a></h4>
-                                    <p>There are many varia passages of Lorem Ipsuable,amar sonar</p>
-                                </div>
-                            </div>
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/comment/3.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">MR Soytan Ali</a></h4>
-                                    <p>There are many varia passages of Lorem Ipsuable,amar sonar</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
                     @if($post->keywords)
 	                    <div class="single-sidebar-widget">
 	                        <h4 class="title">Từ khóa</h4>

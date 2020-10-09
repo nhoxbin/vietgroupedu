@@ -14,11 +14,11 @@ class HomeController extends Controller
 
     public function index() {
         $posts = new Posts;
-        $orders = $posts->where('type', 1)->limit(10)->get();
-        $news = $posts->where('type', 0)->whereHas('category', function ($query) {
+        $orders = $posts->where('type', 1)->whereHas('field')->limit(10)->get();
+        $news = $posts->where('type', 0)->whereHas('parent', function ($query) {
             return $query->where('slug', '=', 'tin-tuc');
         })->limit(4)->get();
-        $event = $posts->where('type', 0)->whereHas('category', function ($query) {
+        $event = $posts->where('type', 0)->whereHas('parent', function ($query) {
             return $query->where('slug', '=', 'su-kien');
         })->limit(3)->get();
         return view('home', compact('orders', 'news', 'event'));

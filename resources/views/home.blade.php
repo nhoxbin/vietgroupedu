@@ -157,7 +157,7 @@
                             <tbody>
                                 @foreach($orders as $post)
                                     <tr>
-                                        <td><a href="{{ $post->slug }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
+                                        <td><a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
                                             <p style="margin: 15px 0px 5px;font-size: 12px;">
                                                 <i class="fa fa-map-marker"></i> {{ $post->field->work_place ?? null }} | Hạn nộp hồ sơ: <i class="fa fa-calendar"></i> {{ $post->field->interview ?? null }}
                                             </p>
