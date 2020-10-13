@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ (isset($page) ? __('page.'.$page) : 'Trang chủ') . ' || ' . config('app.name', 'Laravel') }}</title>
+        <title>{{ ($metaTitle ?? 'Trang chủ') . ' || ' . config('app.name', 'Laravel') }}</title>
         <meta property="og:locale" content="vi_VN">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
         <meta name="description" content="VietGroupEdu l&#224; c&#244;ng ty TƯ VẤN - Đ&#192;O TẠO - CUNG ỨNG thực tập sinh, kỹ sư l&#224;m việc tại Nhật Bản. Lu&#244;n kh&#244;ng ngừng ho&#224;n thiện trong c&#225;c dịch vụ cung cấp nh&#226;n lực, phấn đấu v&#224; kh&#244;ng ngừng t&#236;m kiếm c&#225;c cơ hội tốt hơn cho người lao động Việt Nam.">
@@ -48,11 +48,15 @@
 
         <!-- App Vue Styles
         ============================================ -->
-        <link href="{{ asset('css/app.css') }}?t=<?= time() ?>" rel="stylesheet">
+        {{-- <link href="{{ asset('css/app.css') }}?t=<?= time() ?>" rel="stylesheet"> --}}
 	    
         <!-- Color Css Files
 		============================================ -->	
         <link rel="alternate stylesheet" type="text/css" href="/app/switcher/color-one.css" title="color-one" media="screen" />
+
+        <!-- DataTable
+        ============================================ -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
         <!--Start of Tawk.to Script-->
         <script type="text/javascript">
@@ -92,11 +96,11 @@
         <!--End of Main Wrapper Area-->
 
         {{-- this line use for not to conflict slider --}}
-        @if(request()->path() != '/')
-            <!-- App Vue Scripts
-            ============================================ -->
+        <!-- App Vue Scripts
+        ============================================ -->
+        {{-- @if(request()->path() != '/')
             <script src="{{ asset('js/app.js') }}?t=<?= time() ?>" defer></script>
-        @endif
+        @endif --}}
 
         <!-- Modernizr JS
         ============================================ -->        
@@ -133,6 +137,10 @@
 		============================================ -->
         <script src="/app/js/main.js"></script>
 
-        
+        <!-- DataTable
+        ============================================ -->
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+        @stack('script')
     </body>
 </html>

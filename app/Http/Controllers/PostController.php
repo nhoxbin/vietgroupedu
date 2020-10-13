@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function show($categories, Posts $post) {
-        return view('posts.show', compact('post'));
+    	$metaTitle = $post->title;
+        return view('posts.show', compact('post', 'metaTitle'));
     }
 }

@@ -51,11 +51,8 @@ class CategoryController extends AdminController
         $tree->branch(function ($branch) {
             // <i class='fa {$branch['icon']}'></i>
             $payload = "&nbsp;<strong>{$branch['title']}</strong>";
-
-            if (!isset($branch['children'])) {
-                $uri = url($branch['slug']);
-                $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
-            }
+            $uri = url($branch['slug']);
+            $payload .= "&nbsp;&nbsp;&nbsp;<a href=\"$uri\" class=\"dd-nodrag\">$uri</a>";
 
             return $payload;
         });
