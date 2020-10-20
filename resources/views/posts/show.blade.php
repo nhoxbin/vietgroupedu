@@ -51,52 +51,21 @@
             <div class="col-lg-3 col-md-12 col-12">
                 <div class="sidebar-widget">
                     <div class="single-sidebar-widget">
-                        <h4 class="title">Recent Posts</h4>
+                        <h4 class="title">Đơn hàng gần đây</h4>
                         <div class="recent-content">
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/event/7.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">Learn English in</a></h4>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
+                            @foreach($recent_post as $post)
+                                <div class="recent-content-item">
+                                    <a href=""><img src="{{ url('storage/' . $post->picture) }}" alt="recent order"></a>
+                                    <div class="recent-text">
+                                        <h4><a href="#">{{ \Str::limit($post->title, 22) }}</a></h4>
+                                        {{-- <div class="single-item-comment-view">
+                                            <span><i class="zmdi zmdi-eye"></i>59</span>
+                                            <span><i class="zmdi zmdi-comments"></i>19</span>
+                                        </div> --}}
+                                        {{-- <p>There are many varf passages of Lorem Ipsuable,amar</p> --}}
                                     </div>
-                                    <p>There are many varf passages of Lorem Ipsuable,amar</p>
                                 </div>
-                            </div>
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/event/8.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">Team Works</a></h4>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many varf passages of Lorem Ipsuable,amar</p>
-                                </div>
-                            </div>
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/event/9.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">Learn With Fun</a></h4>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many varf passages of Lorem Ipsuable,amar</p>
-                                </div>
-                            </div>
-                            <div class="recent-content-item">
-                                <a href="#"><img src="img/event/10.jpg" alt=""></a>
-                                <div class="recent-text">
-                                    <h4><a href="#">Writing Skill</a></h4>
-                                    <div class="single-item-comment-view">
-                                        <span><i class="zmdi zmdi-eye"></i>59</span>
-                                        <span><i class="zmdi zmdi-comments"></i>19</span>
-                                    </div>
-                                    <p>There are many varf passages of Lorem Ipsuable,amar</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                     @if($post->keywords)

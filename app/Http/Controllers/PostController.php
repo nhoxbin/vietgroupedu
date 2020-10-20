@@ -12,6 +12,7 @@ class PostController extends Controller
 {
     public function show($categories, Posts $post) {
     	$metaTitle = $post->title;
-        return view('posts.show', compact('post', 'metaTitle'));
+    	$recent_post = Posts::whereDate('created_at', '>=', date('Y-m-d', strtotime("-1 week")))->limit(5)->get();
+        return view('posts.show', compact('post', 'recent_post', 'metaTitle'));
     }
 }

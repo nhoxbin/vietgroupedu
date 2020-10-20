@@ -130,9 +130,7 @@ a.phone-call:hover {
 }
 
 .about-area {
-    position: relative;
-    background: rgba(0, 0, 0, 0) url("img/banner/japan.jpg") no-repeat 0 0 / cover;
-    height: 100%;
+    background: rgba(0, 0, 0, 0) url("img/banner/japan.jpg") no-repeat center center / cover;
 }
 
 .about-area p {
@@ -180,6 +178,14 @@ a.phone-call:hover {
 
 .section-title h3 {
     line-height: 50px;
+}
+
+.single-latest-image img {
+    height: 215px;
+}
+
+div.recent-content-item > a > img {
+    width: 50px;
 }
 
 #scrollUp {

@@ -56,7 +56,7 @@
                         <div class="single-item-text">
                             <h4><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                            <p>Trung tâm Ngoại ngữ, giáo dục và đào tạo của chúng tôi luôn dành mọi tâm huyết cũng như kiến thức, cả cơ sở vật chất tốt nhất và phương pháp giảng dạy hiệu quả để đào tạo và giáo dục các em học viên.</p>
                             <div class="single-item-content">
                                <div class="single-item-rating">
                                    <i class="zmdi zmdi-star"></i>
@@ -80,7 +80,7 @@
                         <div class="single-item-text">
                             <h4><a href="/du-hoc">Du Học</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                            <p>Trung tâm du học Vietgroup Edu là cầu nối giữa các trường học Nhật Bản với các học sinh, sinh viên Việt Nam.</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>
@@ -108,7 +108,7 @@
                         <div class="single-item-text">
                             <h4><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                            <p>Công ty tập trung xuất khẩu lao động sang các nước có nhu cầu cao về nguồn nhân lực: Nhật Bản, Đài Loan, Hàn Quốc, các nước Ả rập - Vùng Vịnh.</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>
@@ -201,15 +201,16 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="single-latest-item">
                                 <div class="single-latest-image">
-                                    <a href="{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
+                                    <a href="/tin-tuc/{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
                                 </div>
                                 <div class="single-latest-text">
-                                    <h3><a href="{{ $new->slug }}">{{ $new->title }}</a></h3>
+                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ $new->title }}</a></h3>
                                     <div class="single-item-comment-view">
                                        <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->created_at)) }}</span>
                                    </div>
-                                   <p>{!! \Str::limit($new->description, 120) !!}</p>
-                                   <a href="{{ $new->slug }}" class="button-default">Xem ngay</a>
+                                   <p>&nbsp;</p>
+                                   {{-- <p>{!! \Str::limit($new->description, 120) !!}</p> --}}
+                                   <a href="/tin-tuc/{{ $new->slug }}" class="button-default">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -238,19 +239,19 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="single-event-item">
                                 <div class="single-event-image">
-                                    <a href="{{ $e->slug }}">
+                                    <a href="/su-kien/{{ $e->slug }}">
                                         <img src="{{ url('storage/' . $e->picture) }}" alt="">
                                         <span><span>{{ date('d', strtotime($e->created_at)) }}</span>{{ date('F', strtotime($e->created_at)) }}</span>
                                     </a>
                                 </div>
                                 <div class="single-event-text">
-                                    <h3><a href="{{ $e->slug }}">{{ $e->title }}</a></h3>
+                                    <h3><a href="/su-kien/{{ $e->slug }}">{{ $e->title }}</a></h3>
                                     {{-- <div class="single-item-comment-view">
                                        <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
                                        <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
                                    </div> --}}
                                    <p>{!! $e->description !!}</p>
-                                   <a class="button-default" href="{{ $e->slug }}">Xem ngay</a>
+                                   <a class="button-default" href="/su-kien/{{ $e->slug }}">Xem ngay</a>
                                 </div>
                             </div>
                         </div>

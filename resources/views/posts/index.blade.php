@@ -47,7 +47,7 @@
                                             <tr>
                                               <td>
                                                 <a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
-                                                <p v-if="post.type == 1" style="margin: 15px 0px 5px;font-size: 12px;">
+                                                <p style="margin: 15px 0px 5px;font-size: 12px;">
                                                     <i class="fa fa-map-marker"></i> {{ $post->field->work_place }} | Hạn nộp hồ sơ: <i class="fa fa-calendar"></i> {{ $post->field->expired }}
                                                 </p>
                                               </td>
@@ -56,7 +56,7 @@
                                             </tr>
                                           @else
                                             <tr>
-                                              <td>{{ $post->title }}</td>
+                                              <td><a href="{{ $child->slug . '/' . $post->slug }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
                                             </tr>
                                           @endif
                                         @endforeach
