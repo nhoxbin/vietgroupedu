@@ -20,14 +20,7 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="about-container">
                         <h3>Về chúng tôi</h3>
-                        <p>
-                            Trong việc phái cử thực tập sinh sang Nhật làm việc, Vietgroup Edu là đơn vị hàng đầu cung cấp việc làm tại
-                            Nhật Bản với quy mô toàn quốc, chúng tôi đã phái cử hơn 5000 thực tập sinh đến Nhật làm việc và liên kết với hơn
-                            500 doanh nghiệp Nhật Bản trong và ngoài nước... {{-- Vietgroup Edu luôn tâm niệm rằng, công việc xây dựng ước mơ và định hướng
-                            tương lai của mỗi lao động Việt là vô cùng quan trọng, nên chúng tôi luôn không ngừng nỗ lực để hỗ trợ lao động
-                            Việt Nam bằng sự chuyên nghiệp, hiệu quả, tận tâm và tạo ra các giá trị bền vững, phát triển lâu dài. Tại Vietgroup Edu,
-                            chúng tôi luôn hiểu rõ khả năng và trách nhiệm của mình đối với người lao động và cộng đồng xã hội --}}
-                        </p>
+                        <p>Vietgroup Edu không chỉ là một công ty mà chúng tôi còn là một tổ chức tập hợp những thành viên mang tư tưởng đóng góp cho xã hội qua các lĩnh vực giáo dục, công nghệ và đào tạo nghề.</p>
                         <a class="button-default" href="/gioi-thieu">Tìm hiểu thêm</a>          
                     </div>
                 </div>
