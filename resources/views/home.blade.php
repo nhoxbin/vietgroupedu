@@ -51,7 +51,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/xuat-khau-lao-dong"><img src="/storage/categories/z2140290408274_985e6f7c04c709ffc91f306b578519e2.jpg" alt=""></a>
+                            <a href="/xuat-khau-lao-dong"><img src="/app/img/course/z2140290408274_985e6f7c04c709ffc91f306b578519e2.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></h4>
@@ -75,7 +75,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/du-hoc"><img src="/storage/categories/z2140290395188_43e297e49247ac53cb26dd86e2aea013.jpg" alt=""></a>
+                            <a href="/du-hoc"><img src="/app/img/course/z2140290395188_43e297e49247ac53cb26dd86e2aea013.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/du-hoc">Du Học</a></h4>
@@ -103,7 +103,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/dao-tao-ngoai-ngu"><img src="storage/categories/z2140290401365_c2a75446bdb4c996863e60b35a63b187.jpg" alt=""></a>
+                            <a href="/dao-tao-ngoai-ngu"><img src="/app/img/course/z2140290401365_c2a75446bdb4c996863e60b35a63b187.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></h4>
