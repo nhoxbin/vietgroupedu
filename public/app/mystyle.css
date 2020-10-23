@@ -67,6 +67,7 @@ a.phone-call:hover {
 }
 
 .text-logo {
+    font-family: 'Raleway';
 	font-weight: 1000;
 }
 
@@ -104,6 +105,7 @@ a.phone-call:hover {
 .text-logo .text-3 {
 	position: relative;
 	color: #FF8B00;
+    margin-left: 0.5rem;
 }
 
 .text-logo .text-3:after {
