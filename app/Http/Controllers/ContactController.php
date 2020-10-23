@@ -24,6 +24,6 @@ class ContactController extends Controller
         if ($request->ajax()) {
         	return response(['message' => 'Thank you for contact us!'], 200);
         }
-        return back()->with('success', 'Thank you for contact us!');
+        return back()->withSuccess('Thank you for contact us!');
     }
 }

@@ -51,7 +51,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/xuat-khau-lao-dong"><img src="/app/img/course/2.jpg" alt=""></a>
+                            <a href="/xuat-khau-lao-dong"><img src="/storage/categories/z2140290408274_985e6f7c04c709ffc91f306b578519e2.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></h4>
@@ -75,7 +75,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/du-hoc"><img src="/app/img/course/1.jpg" alt=""></a>
+                            <a href="/du-hoc"><img src="/storage/categories/z2140290395188_43e297e49247ac53cb26dd86e2aea013.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/du-hoc">Du Học</a></h4>
@@ -103,7 +103,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-item">
                         <div class="single-item-image overlay-effect">
-                            <a href="/dao-tao-ngoai-ngu"><img src="/app/img/course/3.jpg" alt=""></a>
+                            <a href="/dao-tao-ngoai-ngu"><img src="storage/categories/z2140290401365_c2a75446bdb4c996863e60b35a63b187.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
                             <h4><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></h4>
@@ -157,13 +157,13 @@
                             <tbody>
                                 @foreach($orders as $post)
                                     <tr>
-                                        <td><a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
+                                        <td><a href="{{ $post->url }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
                                             <p style="margin: 15px 0px 5px;font-size: 12px;">
                                                 <i class="fa fa-map-marker"></i> {{ $post->field->work_place ?? null }} | Hạn nộp hồ sơ: <i class="fa fa-calendar"></i> {{ $post->field->interview ?? null }}
                                             </p>
                                         </td>
-                                        <td>{{ $post->field ? number_format($post->field->income) : null }}VNĐ</td>
-                                        <td>{{ $post->field->expired ?? null }}</td>
+                                        <td>{{ number_format($post->field->income) }}VNĐ</td>
+                                        <td>{{ $post->field->expired }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -201,16 +201,16 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="single-latest-item">
                                 <div class="single-latest-image">
-                                    <a href="/tin-tuc/{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
+                                    <a href="{{ $new->url }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
                                 </div>
                                 <div class="single-latest-text">
-                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ $new->title }}</a></h3>
+                                    <h3><a href="{{ $new->url }}">{{ $new->title }}</a></h3>
                                     <div class="single-item-comment-view">
                                        <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->created_at)) }}</span>
                                    </div>
                                    <p>&nbsp;</p>
                                    {{-- <p>{!! \Str::limit($new->description, 120) !!}</p> --}}
-                                   <a href="/tin-tuc/{{ $new->slug }}" class="button-default">Xem ngay</a>
+                                   <a href="{{ $new->url }}" class="button-default">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -239,19 +239,19 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="single-event-item">
                                 <div class="single-event-image">
-                                    <a href="/su-kien/{{ $e->slug }}">
+                                    <a href="{{ $e->url }}">
                                         <img src="{{ url('storage/' . $e->picture) }}" alt="">
                                         <span><span>{{ date('d', strtotime($e->created_at)) }}</span>{{ date('F', strtotime($e->created_at)) }}</span>
                                     </a>
                                 </div>
                                 <div class="single-event-text">
-                                    <h3><a href="/su-kien/{{ $e->slug }}">{{ $e->title }}</a></h3>
+                                    <h3><a href="{{ $e->url }}">{{ $e->title }}</a></h3>
                                     {{-- <div class="single-item-comment-view">
                                        <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
                                        <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
                                    </div> --}}
                                    <p>{!! $e->description !!}</p>
-                                   <a class="button-default" href="/su-kien/{{ $e->slug }}">Xem ngay</a>
+                                   <a class="button-default" href="{{ $e->url }}">Xem ngay</a>
                                 </div>
                             </div>
                         </div>

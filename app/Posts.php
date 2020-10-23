@@ -29,6 +29,10 @@ class Posts extends Model
         return $this->getParentsTree($this, $this->slug);
     }
 
+    public function getUrlAttribute() {
+    	return $this->parents_tree;
+    }
+
 	public function parent() {
 		return $this->belongsTo('App\Category', 'category_id');
 	}
