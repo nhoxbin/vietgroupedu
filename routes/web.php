@@ -13,7 +13,7 @@ Route::group(['prefix' => 'artisan/{password}'], function() {
 
 Route::group(['middleware' => 'locale'], function() {
     Route::get('change-language/{language}', 'ChangeLanguageController')
-        ->name('user.change-language');
+         ->name('user.change-language');
 
 	Route::get('{page}', 'PageController')
 		 ->name('page')
@@ -21,8 +21,8 @@ Route::group(['middleware' => 'locale'], function() {
 	Route::post('lien-he', 'ContactController@store')->name('contact.store');
 
 	Route::get('{categories}/{slug}', 'PostController@show')
-	 ->where('categories','^[a-zA-Z0-9-\/]+$')
-	 ->name('post.show');
+		 ->where('categories','^[a-zA-Z0-9-\/]+$')
+		 ->name('post.show');
 
 	Route::get('{categories}', 'CategoryController@index')->name('categories.index');
 

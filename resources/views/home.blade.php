@@ -35,7 +35,7 @@
                 <div class="col-md-12">
                     <div class="section-title-wrapper">
                         <div class="section-title">
-                            <h3>Dịch vụ</h3>
+                            <h3>@lang('page.service')</h3>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                             <a href="/xuat-khau-lao-dong"><img src="/app/img/course/z2140290408274_985e6f7c04c709ffc91f306b578519e2.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></h4>
+                            <h4><a href="/xuat-khau-lao-dong">@lang('page.menu_titles.labor-export')</a></h4>
                             <div class="single-item-text-info"></div>
                             <p>@lang('page.intro.labor-export')</p>
                             <div class="single-item-content">
@@ -71,7 +71,7 @@
                             <a href="/du-hoc"><img src="/app/img/course/z2140290395188_43e297e49247ac53cb26dd86e2aea013.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/du-hoc">Du Học</a></h4>
+                            <h4><a href="/du-hoc">@lang('page.menu_titles.study-abroad')</a></h4>
                             <div class="single-item-text-info"></div>
                             <p>@lang('page.intro.study-abroad')</p>
                             <div class="single-item-content">
@@ -99,7 +99,7 @@
                             <a href="/dao-tao-ngoai-ngu"><img src="/app/img/course/z2140290401365_c2a75446bdb4c996863e60b35a63b187.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></h4>
+                            <h4><a href="/dao-tao-ngoai-ngu">@lang('page.menu_titles.foreign-languages-training')</a></h4>
                             <div class="single-item-text-info"></div>
                             <p>@lang('page.intro.foreign-languages-training')</p>
                             <div class="single-item-content">

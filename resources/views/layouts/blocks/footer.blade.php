@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-footer-widget">
-                    <h3>Trụ sở 1</h3>
+                    <h3>@lang('page.footer.office-1')</h3>
                     <a href="tel:02862-705-057"><i class="fa fa-phone"></i>02862-705-057</a>
                     <span><i class="fa fa-envelope"></i>info@vietgroupedu.com</span>
                     <span><i class="fa fa-globe"></i>{{ url('/') }}</span>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-footer-widget">
-                    <h3>Trụ sở 2</h3>
+                    <h3>@lang('page.footer.office-2')</h3>
                     <a href="tel:02862-705-057"><i class="fa fa-phone"></i>02862-705-057</a>
                     <span><i class="fa fa-envelope"></i>info@vietgroupedu.com</span>
                     <span><i class="fa fa-globe"></i>{{ url('/') }}</span>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-footer-widget">
-                    <h3 style="font-size: 1.5em">C.Ty Vietgroup Edu tại Nhật</h3>
+                    <h3 style="font-size: 1.5em">@lang('page.footer.office-ja')</h3>
                     <a href="tel:080-7348-6789"><i class="fa fa-phone"></i>080-7348-6789</a>
                     <span><i class="fa fa-envelope"></i>info@vietgroupedu.com</span>
                     <span><i class="fa fa-globe"></i>{{ url('/') }}</span>
