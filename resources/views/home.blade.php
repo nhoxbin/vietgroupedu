@@ -19,8 +19,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12">
                     <div class="about-container">
-                        <h3>Về chúng tôi</h3>
-                        <p>Vietgroup Edu không chỉ là một công ty mà chúng tôi còn là một tổ chức tập hợp những thành viên mang tư tưởng đóng góp cho xã hội qua các lĩnh vực giáo dục, công nghệ và đào tạo nghề.</p>
+                        <h3>@lang('page.about-us')</h3>
+                        <p>@lang('page.about-us-description')</p>
                         <a class="button-default" href="/gioi-thieu">Tìm hiểu thêm</a>          
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <div class="single-item-text">
                             <h4><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>Trung tâm Ngoại ngữ, giáo dục và đào tạo của chúng tôi luôn dành mọi tâm huyết cũng như kiến thức, cả cơ sở vật chất tốt nhất và phương pháp giảng dạy hiệu quả để đào tạo và giáo dục các em học viên.</p>
+                            <p>@lang('page.intro.labor-export')</p>
                             <div class="single-item-content">
                                <div class="single-item-rating">
                                    <i class="zmdi zmdi-star"></i>
@@ -73,7 +73,7 @@
                         <div class="single-item-text">
                             <h4><a href="/du-hoc">Du Học</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>Trung tâm du học Vietgroup Edu là cầu nối giữa các trường học Nhật Bản với các học sinh, sinh viên Việt Nam.</p>
+                            <p>@lang('page.intro.study-abroad')</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>
@@ -101,7 +101,7 @@
                         <div class="single-item-text">
                             <h4><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>Công ty tập trung xuất khẩu lao động sang các nước có nhu cầu cao về nguồn nhân lực: Nhật Bản, Đài Loan, Hàn Quốc, các nước Ả rập - Vùng Vịnh.</p>
+                            <p>@lang('page.intro.foreign-languages-training')</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>

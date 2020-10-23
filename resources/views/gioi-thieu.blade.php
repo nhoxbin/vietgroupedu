@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="section-title-wrapper">
                         <div class="section-title">
-                            <h3>Who we are</h3>
+                            <h3>Về chúng tôi</h3>
                         </div>
                     </div>
                 </div>
@@ -34,15 +34,47 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="about-text-container">
-                        <p><span>Well come to Educat</span> come with us, we also teach children about the basic values of human beings as honesty, kindness, generosity, courage, freedom, equality and respect. Learn to celebrate diversity in a spirit of understanding and tolerance and develop a positive regard and awareness of other people. They are taught the values and responsibilities needed to become active members of the community, tolerance and develop something which the modern world is desperate for norem ipsum dolor sit amet desperate.<br>
-                        Adipiscing signiferumque vix et. No alii docendi usu, pri graeco possim percipit ne.</p>
-                        <div class="about-us">
-                            <span>Nam gravida magna vitae ante dignissim</span>
-                            <span>Duis rhoncus lectus at velit hendrerit quis</span>
-                            <span>Sed fringilla tempor arcu feugiat risus</span>
-                            <span>Vivamus semper odio in nibh ultricies</span>
-                        </div>    
-                        <p>Snos trud exerci tation ullorper suscipit lobo maeisrn roester maeoirqs iserrtis nisl ut aliq poerwse thesr oper balinp asein hoinws mawsoib equat. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more tolerance and develop obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through makin of the word in classical literature.</p>
+                        <p><span>Kính chào Quý vị!</span><br />Lời đầu tiên, cho tôi xin thay mặt Công ty Cổ phẩn Đầu tư Giáo dục Vietgroup gửi tới quý vị lời chào trân trọng và thân quý.<br>Vietgroup Edu không chỉ  là một công ty mà chúng tôi còn là một tổ  chức tập hợp những thành viên mang tư tưởng đóng góp cho xã hội qua các lĩnh vực giáo dục, công nghệ và đào tạo nghề. Chúng tôi đã từng bước khẳng định vị  thế  của mình bằng sự  năng động, tận tụy, chuyên nghiệp của đội ngũ CB-CNV được đào tạo bài bản, chuyên sâu trong và ngoài nước.  Công ty  đang và sẽ  tiếp tục tận lực - tận tâm, hầu theo đúng như khẩu hiệu “Vững bước vươn xa” qua các sản phẩm và dịch vụ  của mình.<br />Việc cố  gắng phấn đấu để  mang đến càng nhiều giá trị  tốt đẹp cho Quý khách hàng, đối tác và cộng đồng là điều quý giá nhất mà chúng tôi rất hân hạnh được đồng hành và phục vụ.<br />Kết lời, xin được đại diện toàn thể  CB-CNV Vietgroup Edu, kính chúc sức khỏe, hạnh phúc và thành công đến Quý vị cùng thân quyến.<br />Trân trọng!</p>
+                        <p>Dear Sir/Madam,<br />
+                        First of all, let me on behalf of Vietgroup Education Investment Joint Stock Company send you a respectful and dear greeting.<br />
+                        A society is sustainably developed if the people in that society are well trained; accessed to knowledge and other mutually supportive resources to maximize their capabilities. That way will facilitate selfdevelopment and bring prosperity to their family, prosperity for society. We deeply understand that through our works: improving the quality of human resources, transferring science - technology, management methods and bringing in startups and career development - for all unskilled workers, knowledgeable people to work not only in Viet Nam but also other countries.<br />
+                        Dear customers, Vietgroup Edu is not only a company but also an organization that gathers members who bring ideas to contribute to society through the fields of education, technology and vocational training. We have gradually affirmed our position by the activeness, devotion and professionalism of our staff, who are well and advanced trained at home and abroad. We are working hard – dedicated and will continue to do so as the slogan "Firmly reaching out" through our products and services. Striving for bringing more and more good value to our customers, partners and communities is the most valuable
+                        thing that we are honored to accompany and serve.<br />
+                        Finally, I would like to represent all staff of Vietgroup Edu to wish you and your family good health, happiness and success.</p>
+                        <p>初めまして。私はVIETGROUP教育投資株式会社(VIETGROUP EDU)を代表して皆様にご挨拶させて頂きます。
+                        VIETGROUP EDU は単なる教育機関ではなく、全社員が信念を持って、経験や
+                        専門的な教育によって社会的な分野等に貢献出来る組織です。国内または海外で綿密かつ熱心なトレーニングを受けた社員によって、当社の社会的な立場も徐々に上がって参りました。
+                        当社はこれからも努力を続けて適切な人材と良いサービスを通じ「確実に支援する」というスローガンの元、献身的に取り組んで参ります。
+                        当社はお客様や地域の皆様に出来るだけ多くの価値をもたらすよう努力し、
+                        皆様にとって良い成果が出せるよう励んで参ります。
+                        最後に心より皆様のご健康・ご幸福・ご成功をお祈り申し上げます。</p>
+                        
+                        <br />
+                        <div class="d-flex flex-column justify-content-center">
+                            <span style="text-align: center;">PHƯƠNG CHÂM - OPERATION MOTTO - モットー</span>
+                            <ul class="d-flex flex-column justify-content-center" style="list-style: circle">
+                                <li class="mr-auto">BÉN NHẠY - スピード</li>
+                                <li class="flex-wrap">BỨC PHÁ - スパート</li>
+                                <li>BỀN TRÍ - 忍耐</li>
+                                <li>BẢN LĨNH - 勇気</li>
+                            </ul>
+                        </div>
+
+                        <br />
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <span>SỨ MỆNH - MISSION - 使命</span>
+                            <p>Vietgroup Edu là tổ  chức chuyên về  đào tạo  –  huấn luyện nguồn nhân lực có chất lượng cao nhằm đáp  ứng các nhu cầu thực tiễn của thị trường lao động trong và ngoài nước; song song với việc là cầu nối chuyển giao tri thức công nghệ trong các lĩnh vực mà xã hội quan tâm và hướng đến.</p>
+                            <p>Vietgroup is an organization specialized in training – instructing high quality human resources to meet the practical needs of the domestic and foreign labor market; in addition to being a bridge to transfer technology knowledge in fields that society cares about and aims for.</p>
+                            <p>VIETGROUP EDUは国内また外国労働市場の実際的なニーズに対応するための高品質な人材をトレーニング・教育しております。同時に社会が関心を持ち、目指している分野の技術や知識を広めるための架け橋です。</p>
+                        </div>
+
+                        <br />
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <span>TẦM NHÌN - VISION - 展望</span>
+                            <p>Trở thành tập đoàn chuyên nghiệp hàng đầu trong lĩnh vực tư vấn  -  giáo dục  -  công nghệ. Là nơi đóng góp các giải pháp mang tính đột phá trong việc phát triển các yếu tố nhân lực cho nước nhà.</p>
+                            <p>Becoming a leading corporation in the field of consulting - education - technology. It is the place to contribute breakthrough solutions in the development of human resources for the country.</p>
+                            <p>教育・コンサルテｲング・テクノロジの各分野で一流のプロ集団になることを目標に致します。そして、両国のための人的資源の開発における画期的なソリューションに貢献致します。</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">

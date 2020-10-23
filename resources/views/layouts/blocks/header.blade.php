@@ -10,9 +10,9 @@
                 </div>
                 <div class="col-lg-5 col-md-7 col-12">
                     <div class="header-top-right">
-                        {{-- <div class="content"><a href="#">Vietnamese</a></div>
-                        <div class="content"><a href="#">Japanese</a></div>
-                        <div class="content"><a href="#">English</a></div> --}}
+                        <div class="content"><a href="{!! route('user.change-language', ['vi']) !!}">Vietnamese</a></div>
+                        <div class="content"><a href="{!! route('user.change-language', ['en']) !!}">English</a></div>
+                        <div class="content"><a href="{!! route('user.change-language', ['ja']) !!}">Japanese</a></div>
                     </div>
                 </div>
             </div>
@@ -38,14 +38,14 @@
                         <div class="mainmenu d-none d-lg-block">
                             <nav>
                                 <ul id="nav" class="border-full border-top">
-                                    <li class="current"><a href="/">Trang Chủ</a></li>
-                                    <li><a href="/gioi-thieu">Giới thiệu</a></li>
-                                    <li><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></li>
-                                    <li><a href="/du-hoc">Du học</a></li>
-                                    <li><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></li>
-                                    <li><a href="/tin-tuc">Tin tức</a></li>
-                                    <li><a href="/su-kien">Sự kiện</a></li>
-                                    <li><a href="/lien-he">Liên hệ</a></li>
+                                    <li class="current"><a href="/">@lang('page.menu_titles.home')</a></li>
+                                    <li><a href="/gioi-thieu">@lang('page.menu_titles.introduce')</a></li>
+                                    <li><a href="/xuat-khau-lao-dong">@lang('page.menu_titles.labor-export')</a></li>
+                                    <li><a href="/du-hoc">@lang('page.menu_titles.study-abroad')</a></li>
+                                    <li><a href="/dao-tao-ngoai-ngu">@lang('page.menu_titles.foreign-languages-training')</a></li>
+                                    <li><a href="/tin-tuc">@lang('page.menu_titles.news')</a></li>
+                                    <li><a href="/su-kien">@lang('page.menu_titles.event')</a></li>
+                                    <li><a href="/lien-he">@lang('page.menu_titles.contact')</a></li>
                                 </ul>
                             </nav>
                         </div>
