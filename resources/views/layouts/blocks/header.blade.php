@@ -40,22 +40,12 @@
                                 <ul id="nav" class="border-full border-top">
                                     <li class="current"><a href="/">Trang Chủ</a></li>
                                     <li><a href="/gioi-thieu">Giới thiệu</a></li>
-                                    <li><a href="#">Dịch vụ</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></li>
-                                            <li><a href="/du-hoc">Du học</a></li>
-                                            <li><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Thông báo</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="/tin-tuc">Tin tức</a></li>
-                                            <li><a href="/su-kien">Sự kiện</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/lien-he">Liên hệ</a>
-                                    </li>
+                                    <li><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></li>
+                                    <li><a href="/du-hoc">Du học</a></li>
+                                    <li><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></li>
+                                    <li><a href="/tin-tuc">Tin tức</a></li>
+                                    <li><a href="/su-kien">Sự kiện</a></li>
+                                    <li><a href="/lien-he">Liên hệ</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -91,19 +81,11 @@
                             <ul>
                                 <li><a href="/">Trang Chủ</a></li>
                                 <li><a href="/gioi-thieu">Giới thiệu</a></li>
-                                <li><a href="#">Dịch vụ</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></li>
-                                        <li><a href="/du-hoc">Du học</a></li>
-                                        <li><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Thông báo</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="/tin-tuc">Tin tức</a></li>
-                                        <li><a href="/su-kien">Sự kiện</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/xuat-khau-lao-dong">Xuất khẩu lao động</a></li>
+                                <li><a href="/du-hoc">Du học</a></li>
+                                <li><a href="/dao-tao-ngoai-ngu">Đào tạo ngoại ngữ</a></li>
+                                <li><a href="/tin-tuc">Tin tức</a></li>
+                                <li><a href="/su-kien">Sự kiện</a></li>
                                 <li><a href="/lien-he">Liên hệ</a></li>
                             </ul>
                         </nav>
