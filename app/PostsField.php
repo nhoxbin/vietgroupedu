@@ -9,7 +9,8 @@ class PostField extends Model
 {
 	protected $primaryKey = 'post_id';
     public $incrementing = false;
-
+    public $timestamps = false;
+    
     public function post() {
     	return $this->belongsTo('App\Posts');
     }
