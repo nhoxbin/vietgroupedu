@@ -6,7 +6,7 @@ return [
 	'tin-tuc' => 'Tin tức',
 	'su-kien' => 'Sự kiện',
 	'xuat-khau-lao-dong' => 'Xuất khẩu lao động',
-
+	'slogan' => 'VỮNG BƯỚC VƯƠN XA',
 	'about-us-description' => 'Vietgroup Edu không chỉ là một công ty mà chúng tôi còn là một tổ chức tập hợp những thành viên mang tư tưởng đóng góp cho xã hội qua các lĩnh vực giáo dục, công nghệ và đào tạo nghề.',
 	'about-us' => 'Về chúng tôi',
 	'service' => 'Dịch vụ',

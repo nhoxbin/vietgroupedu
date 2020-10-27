@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
                   ->onDelete('set null')
                   ->onUpdate('cascade');
             $table->boolean('type')->comment('0: bài viết, 1: đơn hàng');
+            $table->string('language', 10);
             $table->string('title');
             $table->string('picture')->nullable();
             $table->string('slug')->nullable();

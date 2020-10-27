@@ -16,7 +16,7 @@ class CreatePostFieldsTable extends Migration
         Schema::create('post_fields', function (Blueprint $table) {
             $table->foreignId('post_id')
                   ->primary()
-                  ->constrained('posts')
+                  ->constrained()
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
             $table->date('interview');

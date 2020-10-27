@@ -57,6 +57,9 @@ class PostsController extends AdminController
         $form->select('category_id', __('Danh mục'))
              ->options($menuModel::selectOptions())
              ->rules("required");
+        $form->radio('language', __('Ngôn ngữ'))
+             ->options(['vi' => 'Tiếng Việt', 'en' => 'Tiếng Anh', 'ja' => 'Tiếng Nhật'])
+             ->rules("required|string");
         $form->text('title', __('Tiêu đề'))->rules("required|string");
         $form->image('picture', __('Hình ảnh'))
              ->uniqueName()
