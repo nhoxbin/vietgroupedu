@@ -13,7 +13,7 @@ class CreatePostFieldsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_fields', function (Blueprint $table) {
+        Schema::create('posts_fields', function (Blueprint $table) {
             $table->foreignId('post_id')
                   ->primary()
                   ->constrained()
