@@ -23,7 +23,6 @@ class CreatePostFieldsTable extends Migration
             $table->date('expired');
             $table->unsignedDecimal('income', 15, 2);
             $table->string('work_place');
-            $table->timestamps();
         });
     }
 

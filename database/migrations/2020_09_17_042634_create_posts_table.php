@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->unsignedInteger('category_id')
                   ->nullable()
-                  ->constrained('categories')
+                  ->constrained()
                   ->onDelete('set null')
                   ->onUpdate('cascade');
             $table->boolean('type')->comment('0: bài viết, 1: đơn hàng');
