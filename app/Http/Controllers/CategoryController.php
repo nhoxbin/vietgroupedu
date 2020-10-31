@@ -12,11 +12,14 @@ class CategoryController extends Controller
     	// lấy và tìm category cuối cùng trong chuỗi url
 		$categories = explode('/', $categories);
     	$last_slug = array_pop($categories);
-        $cate = Category::where('slug', $last_slug)->with('posts')->firstOrFail();
+        $cate = Category::where('slug', $last_slug)->with(['children' => function($c) {
+            $c->with(['posts' => function($p) {
+                $p->where('language', app()->getLocale())->get();
+            }]);
+        }, 'posts' => function($p) {
+            $p->where('language', app()->getLocale())->get();
+        }])->firstOrFail();
         $metaTitle = $cate->title;
-    	if ($request->expectsJson()) {
-        	return response(new CategoryResource($cate));
-        }
         return view('posts.index', compact('cate', 'metaTitle'));
     }
 }

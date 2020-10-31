@@ -74,6 +74,7 @@ class CategoryController extends AdminController
         $form = new Form(new $cateModel());
         $form->select('parent_id', 'Danh mục cha')->options($cateModel::selectOptions());
         $form->text('title', 'Tiêu đề')->rules('required');
+        $form->text('slug', 'Slug')->rules('required');
 
         return $form;
     }

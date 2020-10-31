@@ -14,13 +14,12 @@
                             <div class="single-item-comment-view">
                                <span><i class="zmdi zmdi-calendar-check"></i>25 jun 2050</span>
                             </div>
+                            {{-- @if($post->)
+                                <div class="quote-section">
+                                    <p>but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                </div>
+                            @endif --}}
                             {!! $post->description !!}
-                            {{-- <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                            <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, There are many variations of passages of Lorem Ipsum available,</p>
-                            <div class="quote-section">
-                                <p>but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                            </div>
-                            <p>Lorem Ipsuable, amrn in some by injected humour, There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p> --}}
                             <div class="tags-and-links">
                             	@if($post->keywords)
 	                                <div class="related-tag">
@@ -54,10 +53,17 @@
                         <h4 class="title">Đơn hàng gần đây</h4>
                         <div class="recent-content">
                             @foreach($recent_post as $post)
+                                @php
+                                    $url = '/' . ($post->post->type ? 'don-hang' : \Str::slug($post->post->first_cate->title)) . '/' . $post->slug;
+                                @endphp
                                 <div class="recent-content-item">
-                                    <a href=""><img src="{{ url('storage/' . $post->picture) }}" alt="recent order"></a>
+                                    <a href="{{ $url }}"><img src="{{ url('storage/' . $post->picture) }}" alt="recent order"></a>
                                     <div class="recent-text">
-                                        <h4><a href="#">{{ \Str::limit($post->title, 22) }}</a></h4>
+                                        <h4>
+                                            <a href="{{ $url }}">
+                                                {{ \Str::limit($post->title, 22) }}
+                                            </a>
+                                        </h4>
                                         {{-- <div class="single-item-comment-view">
                                             <span><i class="zmdi zmdi-eye"></i>59</span>
                                             <span><i class="zmdi zmdi-comments"></i>19</span>

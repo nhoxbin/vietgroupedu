@@ -4,13 +4,11 @@ namespace App\Admin\Controllers;
 
 use App\Category;
 use App\Posts;
-use App\PostField;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
-use Illuminate\Support\Str;
 
 class PostsController extends AdminController
 {
@@ -20,17 +18,19 @@ class PostsController extends AdminController
         $grid = new Grid(new Posts());
         $grid->disableExport();
 
-        $grid->quickSearch('title');
-        $grid->column('parent.title', __('Danh mục'));
-        $grid->column('title', __('Tiêu đề'));
-        $grid->column('picture', __('Hình ảnh'))->display(function ($img) {
-            return "<img src='".url('storage/' . $img)."' height='100px' />";
+        $grid->column('parent.title', 'Mục');
+        $grid->fields('Tiêu đề')->display(function($field) {
+            $fields = array_map(function ($f) {
+                return "{$f['title']}<br />";
+            }, $field);
+            return join('&nbsp;', $fields);
         });
         $grid->created_at('created_at', __('Tạo lúc'))
              ->sortable()
              ->display(function ($created_at) {
                 return date('d-m-Y h:i:s', strtotime($created_at));
             });
+        $grid->model()->orderBy('created_at', 'desc');
 
         return $grid;
     }
@@ -38,10 +38,6 @@ class PostsController extends AdminController
     protected function detail($id) {
         $show = new Show(Posts::findOrFail($id));
         $show->field('parent.parents_tree', __('Tiêu đề danh mục'));
-        $show->field('title', __('Tiêu đề'));
-        $show->field('keywords', __('Tags'));
-        $show->field('picture', __('Hình ảnh'))->avatar()->image();
-        $show->field('description', __('Mô tả'));
 
         return $show;
     }
@@ -57,27 +53,29 @@ class PostsController extends AdminController
         $form->select('category_id', __('Danh mục'))
              ->options($menuModel::selectOptions())
              ->rules("required");
-        $form->radio('language', __('Ngôn ngữ'))
-             ->options(['vi' => 'Tiếng Việt', 'en' => 'Tiếng Anh', 'ja' => 'Tiếng Nhật'])
-             ->rules("required|string");
-        $form->text('title', __('Tiêu đề'))->rules("required|string");
-        $form->image('picture', __('Hình ảnh'))
-             ->uniqueName()
-             ->rules("required|image");
-        $form->tags('keywords', __('Từ khóa'))->rules("required");
-        $form->ckeditor('description', __('Mô tả'))->rules("required");
+        $form->hasMany('fields', 'Bài viết', function (Form\NestedForm $form) {
+
+            $form->text('title', __('Tiêu đề'));
+            $form->tags('keywords', __('Từ khóa'));
+            $form->radio('language', __('Ngôn ngữ'))
+                 ->options(['vi' => 'Tiếng Việt', 'en' => 'Tiếng Anh', 'ja' => 'Tiếng Nhật'])
+                 ->rules("required|in:vi,en,ja");
+            $form->ckeditor('description', __('Mô tả'));
+            $form->image('picture', __('Hình ảnh'))
+                 ->uniqueName();
+        });
+        
         $form->datetime('created_at', 'Tạo lúc')->rules("required");
         $form->datetime('updated_at', __('Cập nhật lúc'))->rules("required");
-
         $form->radio('type', 'Loại')
             ->options([
                 0 => 'Bài viết',
                 1 => 'Đơn hàng',
             ])->when(1, function (Form $form) {
 
-                $form->currency('field.income', __('Thu nhập'))->rules("required");
-                $form->text('field.work_place', __('Nơi làm việc'))->rules("required");
-                $form->dateRange('field.interview', 'field.expired', 'Ngày')->rules("required");
+                $form->currency('order.income', __('Thu nhập'))->rules("required");
+                $form->text('order.work_place', __('Nơi làm việc'))->rules("required");
+                $form->dateRange('order.interview', 'order.expired', 'Ngày')->rules("required");
 
             })->default('0');
 

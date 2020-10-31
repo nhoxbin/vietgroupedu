@@ -38,14 +38,14 @@
                         <div class="mainmenu d-none d-lg-block">
                             <nav>
                                 <ul id="nav" class="border-full border-top">
-                                    <li class="current"><a href="/">@lang('page.menu_titles.home')</a></li>
-                                    <li><a href="/gioi-thieu">@lang('page.menu_titles.introduce')</a></li>
-                                    <li><a href="/xuat-khau-lao-dong">@lang('page.menu_titles.labor-export')</a></li>
-                                    <li><a href="/du-hoc">@lang('page.menu_titles.study-abroad')</a></li>
-                                    <li><a href="/dao-tao-ngoai-ngu">@lang('page.menu_titles.foreign-languages-training')</a></li>
-                                    <li><a href="/tin-tuc">@lang('page.menu_titles.news')</a></li>
-                                    <li><a href="/su-kien">@lang('page.menu_titles.event')</a></li>
-                                    <li><a href="/lien-he">@lang('page.menu_titles.contact')</a></li>
+                                    <li class="current"><a href="/">@lang('page.trang-chu')</a></li>
+                                    <li><a href="/gioi-thieu">@lang('page.gioi-thieu')</a></li>
+                                    <li><a href="/xuat-khau-lao-dong">@lang('page.xuat-khau-lao-dong')</a></li>
+                                    <li><a href="/du-hoc">@lang('page.du-hoc')</a></li>
+                                    <li><a href="/dao-tao-ngoai-ngu">@lang('page.dao-tao-ngoai-ngu')</a></li>
+                                    <li><a href="/tin-tuc">@lang('page.tin-tuc')</a></li>
+                                    <li><a href="/su-kien">@lang('page.su-kien')</a></li>
+                                    <li><a href="/lien-he">@lang('page.lien-he')</a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Extensions\Form\CKEditor;
 use Encore\Admin\Form;
 
 /**
@@ -21,3 +22,4 @@ use Encore\Admin\Form;
  */
 
 Form::forget(['map', 'editor']);
+Form::extend('ckeditor', CKEditor::class);

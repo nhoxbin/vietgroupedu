@@ -21,7 +21,7 @@
                     <div class="about-container">
                         <h3>@lang('page.about-us')</h3>
                         <p>@lang('page.about-us-description')</p>
-                        <a class="button-default" href="/gioi-thieu">Tìm hiểu thêm</a>          
+                        <a class="button-default" href="/gioi-thieu">@lang('page.tim-hieu-them')</a>          
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <div class="col-md-12">
                     <div class="section-title-wrapper">
                         <div class="section-title">
-                            <h3>@lang('page.service')</h3>
+                            <h3>@lang('page.dich-vu')</h3>
                         </div>
                     </div>
                 </div>
@@ -47,9 +47,9 @@
                             <a href="/xuat-khau-lao-dong"><img src="/app/img/course/z2140290408274_985e6f7c04c709ffc91f306b578519e2.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/xuat-khau-lao-dong">@lang('page.menu_titles.labor-export')</a></h4>
+                            <h4><a href="/xuat-khau-lao-dong">@lang('page.xuat-khau-lao-dong')</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>@lang('page.intro.labor-export')</p>
+                            <p>@lang('page.intro.xuat-khau-lao-dong')</p>
                             <div class="single-item-content">
                                <div class="single-item-rating">
                                    <i class="zmdi zmdi-star"></i>
@@ -61,7 +61,7 @@
                             </div>   
                         </div>
                         <div class="button-bottom">
-                            <a href="/xuat-khau-lao-dong" class="button-default">Tìm hiểu ngay</a>
+                            <a href="/xuat-khau-lao-dong" class="button-default">@lang('page.tim-hieu-ngay')</a>
                         </div>
                     </div>
                 </div>
@@ -71,9 +71,9 @@
                             <a href="/du-hoc"><img src="/app/img/course/z2140290395188_43e297e49247ac53cb26dd86e2aea013.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/du-hoc">@lang('page.menu_titles.study-abroad')</a></h4>
+                            <h4><a href="/du-hoc">@lang('page.du-hoc')</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>@lang('page.intro.study-abroad')</p>
+                            <p>@lang('page.intro.du-hoc')</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>
@@ -89,7 +89,7 @@
                             </div>   
                         </div>
                         <div class="button-bottom">
-                            <a href="/du-hoc" class="button-default">Tìm hiểu ngay</a>
+                            <a href="/du-hoc" class="button-default">@lang('page.tim-hieu-ngay')</a>
                         </div>
                     </div>
                 </div>
@@ -99,9 +99,9 @@
                             <a href="/dao-tao-ngoai-ngu"><img src="/app/img/course/z2140290401365_c2a75446bdb4c996863e60b35a63b187.jpg" alt=""></a>
                         </div>
                         <div class="single-item-text">
-                            <h4><a href="/dao-tao-ngoai-ngu">@lang('page.menu_titles.foreign-languages-training')</a></h4>
+                            <h4><a href="/dao-tao-ngoai-ngu">@lang('page.dao-tao-ngoai-ngu')</a></h4>
                             <div class="single-item-text-info"></div>
-                            <p>@lang('page.intro.foreign-languages-training')</p>
+                            <p>@lang('page.intro.dao-tao-ngoai-ngu')</p>
                             <div class="single-item-content">
                                {{-- <div class="single-item-comment-view">
                                    <span><i class="zmdi zmdi-eye"></i>59</span>
@@ -117,7 +117,7 @@
                             </div>   
                         </div>
                         <div class="button-bottom">
-                            <a href="/dao-tao-ngoai-ngu" class="button-default">Tìm hiểu ngay</a>
+                            <a href="/dao-tao-ngoai-ngu" class="button-default">@lang('page.tim-hieu-ngay')</a>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                 <div class="col-md-12">
                     <div class="section-title-wrapper">
                         <div class="section-title">
-                            <h3>thông tin đơn hàng</h3>
+                            <h3>@lang('page.thong-tin-don-hang')</h3>
                         </div>
                     </div>
                 </div>
@@ -142,21 +142,21 @@
                         <table class="table table-hover table-striped">
                             <thead>
                                 <tr>
-                                    <th>Ngành nghề</th>
-                                    <th>Mức lương</th>
-                                    <th>Ngày phỏng vấn</th>
+                                    <th>@lang('page.tieu-de')</th>
+                                    <th>@lang('page.muc-luong')</th>
+                                    <th>@lang('page.ngay-phong-van')</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($orders as $post)
+                                @foreach($orders as $field)
                                     <tr>
-                                        <td><a href="{{ $post->url }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
+                                        <td><a href="/don-hang/{{ $field->slug }}"><h6>{{ $field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
                                             <p style="margin: 15px 0px 5px;font-size: 12px;">
-                                                <i class="fa fa-map-marker"></i> {{ $post->field->work_place ?? null }} | Hạn nộp hồ sơ: <i class="fa fa-calendar"></i> {{ $post->field->interview ?? null }}
+                                                <i class="fa fa-map-marker"></i> {{ $field->post->order->work_place ?? null }} | Hạn nộp hồ sơ: <i class="fa fa-calendar"></i> {{ $field->post->order->interview ?? null }}
                                             </p>
                                         </td>
-                                        <td>{{ number_format($post->field->income) }}VNĐ</td>
-                                        <td>{{ $post->field->expired }}</td>
+                                        <td>{{ number_format($field->post->order->income) }}VNĐ</td>
+                                        <td>{{ $field->post->order->expired }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -177,7 +177,7 @@
     </div>
     <!--End of Fun Factor Area-->   
     <!--Latest News Area Start--> 
-    @if($news->count() > 0)
+    @if(count($news))
         <div class="latest-area section-padding bg-white">
             <div class="container">
                 <div class="row">
@@ -194,16 +194,15 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="single-latest-item">
                                 <div class="single-latest-image">
-                                    <a href="{{ $new->url }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
+                                    <a href="/tin-tuc/{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
                                 </div>
                                 <div class="single-latest-text">
-                                    <h3><a href="{{ $new->url }}">{{ $new->title }}</a></h3>
+                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ $new->title }}</a></h3>
                                     <div class="single-item-comment-view">
-                                       <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->created_at)) }}</span>
+                                       <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->post->created_at)) }}</span>
                                    </div>
                                    <p>&nbsp;</p>
-                                   {{-- <p>{!! \Str::limit($new->description, 120) !!}</p> --}}
-                                   <a href="{{ $new->url }}" class="button-default">Xem ngay</a>
+                                   <a href="/tin-tuc/{{ $new->slug }}" class="button-default">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +214,7 @@
 
     <!--End of Latest News Area-->
     <!--Event Area Start-->
-    @if($event->count() > 0)
+    {{-- @if($event->count() > 0)
         <div class="event-area section-padding bg-white">
             <div class="container">
                 <div class="row">
@@ -239,10 +238,6 @@
                                 </div>
                                 <div class="single-event-text">
                                     <h3><a href="{{ $e->url }}">{{ $e->title }}</a></h3>
-                                    {{-- <div class="single-item-comment-view">
-                                       <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                                       <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
-                                   </div> --}}
                                    <p>{!! $e->description !!}</p>
                                    <a class="button-default" href="{{ $e->url }}">Xem ngay</a>
                                 </div>
@@ -252,6 +247,6 @@
                 </div>
             </div>
         </div>
-    @endif
+    @endif --}}
     <!--End of Event Area-->
 @endsection

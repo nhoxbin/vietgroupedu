@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Posts;
+use App\PostField;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,12 +15,16 @@ class HomeController extends Controller
 
     public function index() {
         $posts = new Posts;
-        $orders = $posts->where('type', 1)->whereHas('field')->limit(10)->get();
-        $news = $posts->where('type', 0)->whereHas('parent', function ($query) {
-            return $query->where('slug', '=', 'tin-tuc');
-        })->limit(4)->get();
-        $event = $posts->where('type', 0)->whereHas('parent', function ($query) {
-            return $query->where('slug', '=', 'su-kien');
+        $orders = PostField::where('language', app()->getLocale())->has('post.order')->get();
+        $news = PostField::where('language', app()->getLocale())
+                        ->doesntHave('post.order')
+                        ->with(['post.parent' => function($q) {
+                            $q->where('slug', 'tin-tuc')->get();
+                        }])->whereHas('post.parent')
+                        ->get();
+        $event = $posts->doesntHave('order')
+                       ->whereHas('parent', function ($q) {
+            return $q->where('slug', '=', 'su-kien');
         })->limit(3)->get();
         return view('home', compact('orders', 'news', 'event'));
     }

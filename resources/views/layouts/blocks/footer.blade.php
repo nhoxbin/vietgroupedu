@@ -23,7 +23,7 @@
                             </h4>
                         </a>
                     </div>
-                    <p style="font-weight: bold; color: orange; font-size: 22px; font-family: emoji">@lang('slogan')</p>
+                    <p style="font-weight: bold; color: orange; font-size: 22px; font-family: emoji">@lang('page.slogan')</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/VietgroupEdu/"><i class="zmdi zmdi-facebook"></i></a>
                         <a href="#"><i class="zmdi zmdi-instagram"></i></a>

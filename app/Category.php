@@ -28,6 +28,10 @@ class Category extends Model
         return $this->belongsTo('App\Category', 'parent_id');
     }
 
+    public function getUrlAttribute() {
+        return 'test';
+    }
+
     public function getParentsTree($cate, $name) {
         if ($cate->parent_id == null)
             return $name;

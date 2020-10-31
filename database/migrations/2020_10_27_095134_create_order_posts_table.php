@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsFieldsTable extends Migration
+class CreateOrderPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class CreatePostsFieldsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts_fields', function (Blueprint $table) {
-            $table->id();
+        Schema::create('order_posts', function (Blueprint $table) {
             $table->foreignId('post_id')
+                  ->primary()
                   ->constrained()
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
-            $table->string('language', 10);
-            $table->string('title');
-            $table->string('picture')->nullable();
-            $table->string('slug')->nullable();
-            $table->text('keywords')->nullable();
-            $table->text('description');
+            $table->date('interview');
+            $table->date('expired');
+            $table->unsignedDecimal('income', 15, 2);
+            $table->string('work_place');
         });
     }
 
@@ -35,6 +33,6 @@ class CreatePostsFieldsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_fields');
+        Schema::dropIfExists('order_posts');
     }
 }

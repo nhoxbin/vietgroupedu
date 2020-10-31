@@ -20,16 +20,8 @@ class CreatePostsTable extends Migration
                   ->constrained()
                   ->onDelete('set null')
                   ->onUpdate('cascade');
-            $table->boolean('type')->comment('0: bài viết, 1: đơn hàng');
-            $table->string('language', 10);
-            $table->string('title');
-            $table->string('picture')->nullable();
-            $table->string('slug')->nullable();
-            $table->text('keywords')->nullable();
-            $table->text('description');
+            $table->boolean('type')->default(0)->comment('0: bài viết, 1: đơn hàng');
             $table->timestamps();
-
-            $table->unique(['category_id', 'slug']);
         });
     }
 
