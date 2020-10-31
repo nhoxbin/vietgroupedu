@@ -21,9 +21,9 @@ class PostsController extends AdminController
         $grid->column('parent.title', 'Mục');
         $grid->fields('Tiêu đề')->display(function($field) {
             $fields = array_map(function ($f) {
-                return "{$f['title']}<br />";
+                return $f['title'];
             }, $field);
-            return join('&nbsp;', $fields);
+            return join('<br />', $fields);
         });
         $grid->created_at('created_at', __('Tạo lúc'))
              ->sortable()

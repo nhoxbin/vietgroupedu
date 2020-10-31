@@ -64,11 +64,6 @@
                                                 {{ \Str::limit($post->title, 22) }}
                                             </a>
                                         </h4>
-                                        {{-- <div class="single-item-comment-view">
-                                            <span><i class="zmdi zmdi-eye"></i>59</span>
-                                            <span><i class="zmdi zmdi-comments"></i>19</span>
-                                        </div> --}}
-                                        {{-- <p>There are many varf passages of Lorem Ipsuable,amar</p> --}}
                                     </div>
                                 </div>
                             @endforeach
