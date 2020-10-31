@@ -59,6 +59,7 @@ class PostsController extends AdminController
             $form->tags('keywords', __('Từ khóa'));
             $form->radio('language', __('Ngôn ngữ'))
                  ->options(['vi' => 'Tiếng Việt', 'en' => 'Tiếng Anh', 'ja' => 'Tiếng Nhật'])
+                 ->default('vi')
                  ->rules("required|in:vi,en,ja");
             $form->ckeditor('description', __('Mô tả'));
             $form->image('picture', __('Hình ảnh'))
