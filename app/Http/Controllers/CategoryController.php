@@ -10,14 +10,17 @@ class CategoryController extends Controller
 {
     public function index(Request $request, $categories) {
     	// lấy và tìm category cuối cùng trong chuỗi url
-		$categories = explode('/', $categories);
-    	$last_slug = array_pop($categories);
-        $cate = Category::where('slug', $last_slug)->with(['children' => function($c) {
+		$category = $request->segment(1) === 'don-hang' ? 'xuat-khau-lao-dong' : $request->segment(1);
+        $cate = Category::where('slug', $category)->with(['children' => function($c) {
             $c->with(['posts' => function($p) {
-                $p->where('language', app()->getLocale())->get();
+                $p->whereHas('fields', function($f) {
+                    $f->where('language', app()->getLocale());
+                });
             }]);
         }, 'posts' => function($p) {
-            $p->where('language', app()->getLocale())->get();
+            $p->whereHas('fields', function($f) {
+                $f->where('language', app()->getLocale())->where('slug', '<>', null);
+            });
         }])->firstOrFail();
         $metaTitle = $cate->title;
         return view('posts.index', compact('cate', 'metaTitle'));

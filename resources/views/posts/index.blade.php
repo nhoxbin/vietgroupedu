@@ -14,11 +14,11 @@
     </div>
     <div class="row">
       <div class="col-lg-12 col-md-12 col-12">
-        @if($cate->children->count() > 0)
+        @if($cate->children->count())
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               @foreach($cate->children as $child)
-                <a class="nav-item nav-link {{ $loop->first ? 'active': null }}" data-toggle="tab" href="#{{ $child->slug }}" role="tab">@lang('categories.'.$child->slug)</a>
+                <a class="nav-item nav-link {{ $loop->first ? 'active': null }}" data-toggle="tab" href="#{{ $child->slug }}" role="tab">@lang('page.'.$child->slug)</a>
               @endforeach
             </div>
           </nav>
@@ -77,13 +77,11 @@
               </thead>
               <tbody>
                 @foreach($cate->posts as $post)
-                    @if($post->slug != '')
-                        <tr>
-                            <td>
-                                <a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
-                            </td>
-                        </tr>
-                    @endif
+                  <tr>
+                    <td>
+                      <a href="{{ $post->parents_tree . $post->fields[0]->slug }}"><h6>{{ $post->fields[0]->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
+                    </td>
+                  </tr>
                 @endforeach
               </tbody>
             </table>

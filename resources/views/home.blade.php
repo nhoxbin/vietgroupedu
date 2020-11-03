@@ -177,7 +177,7 @@
     </div>
     <!--End of Fun Factor Area-->   
     <!--Latest News Area Start--> 
-    @if(count($news))
+    @if($news->count())
         <div class="latest-area section-padding bg-white">
             <div class="container">
                 <div class="row">
@@ -197,7 +197,7 @@
                                     <a href="/tin-tuc/{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
                                 </div>
                                 <div class="single-latest-text">
-                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ $new->title }}</a></h3>
+                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ \Str::limit($new->title, 40) }}</a></h3>
                                     <div class="single-item-comment-view">
                                        <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->post->created_at)) }}</span>
                                    </div>
@@ -211,10 +211,10 @@
             </div>
         </div>
     @endif
-
     <!--End of Latest News Area-->
+
     <!--Event Area Start-->
-    {{-- @if($event->count() > 0)
+    @if($event->count())
         <div class="event-area section-padding bg-white">
             <div class="container">
                 <div class="row">
@@ -231,15 +231,14 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="single-event-item">
                                 <div class="single-event-image">
-                                    <a href="{{ $e->url }}">
+                                    <a href="/su-kien/{{ $e->slug }}">
                                         <img src="{{ url('storage/' . $e->picture) }}" alt="">
                                         <span><span>{{ date('d', strtotime($e->created_at)) }}</span>{{ date('F', strtotime($e->created_at)) }}</span>
                                     </a>
                                 </div>
                                 <div class="single-event-text">
-                                    <h3><a href="{{ $e->url }}">{{ $e->title }}</a></h3>
-                                   <p>{!! $e->description !!}</p>
-                                   <a class="button-default" href="{{ $e->url }}">Xem ngay</a>
+                                    <h3><a href="/su-kien/{{ $e->slug }}">{{ $e->title }}</a></h3>
+                                   <a class="button-default" href="/su-kien/{{ $e->slug }}">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -247,6 +246,6 @@
                 </div>
             </div>
         </div>
-    @endif --}}
+    @endif
     <!--End of Event Area-->
 @endsection

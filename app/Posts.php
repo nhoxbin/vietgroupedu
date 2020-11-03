@@ -46,7 +46,6 @@ class Posts extends Model
 
     public function fields() {
         return $this->hasMany('App\PostField', 'post_id');
-                    // ->where('language', app()->getLocale());
     }
 
     public function order() {
