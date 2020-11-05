@@ -6,7 +6,7 @@ return [
 	'tieu-de' => 'Tiêu đề',
 	'muc-luong' => 'Mức lương',
 	'ngay-phong-van' => 'Ngày phỏng vấn',
-	'profile-deadline' => 'Hạn nộp hồ sơ',
+	'han-nop-ho-so' => 'Hạn nộp hồ sơ',
 
 	'trang-chu' => 'Trang chủ',
 	'lien-he' => 'Liên hệ',
@@ -14,6 +14,7 @@ return [
 	'tin-tuc' => 'Tin tức',
 	'su-kien' => 'Sự kiện',
 
+	'xem-them' => 'Xem thêm',
 	'tim-hieu-them' => 'Tìm hiểu thêm',
 	'tim-hieu-ngay' => 'Tìm hiểu ngay',
 	'thong-tin-don-hang' => 'Thông tin đơn hàng',

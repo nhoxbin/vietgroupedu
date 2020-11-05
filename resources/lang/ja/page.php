@@ -3,15 +3,21 @@
 return [
 	'slogan' => 'スローガン「着実に手を差し伸べる」。',
 	
-	'about-us' => '私たちについて',
-	'tin-tuc' => 'Tin tức',
-	'su-kien' => 'Sự kiện',
-	'lien-he' => 'Liên hệ',
-
 	'tieu-de' => 'Tiêu đề',
 	'muc-luong' => 'Mức lương',
 	'ngay-phong-van' => 'Ngày phỏng vấn',
 	'profile-deadline' => 'Hạn nộp hồ sơ',
+
+	'trang-chu' => 'Trang chủ',
+	'lien-he' => 'Liên hệ',
+	'gioi-thieu' => 'Giới thiệu',
+	'tin-tuc' => 'Tin tức',
+	'su-kien' => 'Sự kiện',
+
+	'xem-them' => 'Xem thêm',
+	'tim-hieu-them' => 'Tìm hiểu thêm',
+	'tim-hieu-ngay' => 'Tìm hiểu ngay',
+	'thong-tin-don-hang' => 'Thông tin đơn hàng',
 
 	'xuat-khau-lao-dong' => 'Xuất khẩu lao động',
 	'di-nhat-ban' => 'Đi Nhật Bản',
@@ -25,13 +31,8 @@ return [
 	'tieng-nhat' => 'Tiếng Nhật',
 	'tieng-anh' => 'Tiếng Anh',
 
-	'lien-he' => 'Liên hệ',
-	'gioi-thieu' => 'Giới thiệu',
-	'tin-tuc' => 'Tin tức',
-	'su-kien' => 'Sự kiện',
-
 	'about-us-intro' => 'Vietgroup Edu không chỉ là một công ty mà chúng tôi còn là một tổ chức tập hợp những thành viên mang tư tưởng đóng góp cho xã hội qua các lĩnh vực giáo dục, công nghệ và đào tạo nghề.',
-	'about-us' => 'Về chúng tôi',
+	'about-us' => '私たちについて',
 	'dich-vu' => 'Dịch vụ',
 
 	'intro' => [
@@ -40,7 +41,7 @@ return [
 		'dao-tao-ngoai-ngu' => 'Công ty tập trung xuất khẩu lao động sang các nước có nhu cầu cao về nguồn nhân lực: Nhật Bản, Đài Loan, Hàn Quốc, các nước Ả rập - Vùng Vịnh.',
 	],
 	'footer' => [
-		'tru-so-1' => 'Trụ sở 1',
+		'office-1' => 'Trụ sở 1',
 		'office-2' => 'Trụ sở 2',
 		'office-ja' => 'C.TY VIETGROUP EDU TẠI NHẬT'
 	]

@@ -54,7 +54,7 @@ class PostsController extends AdminController
              ->options($menuModel::selectOptions())
              ->rules("required");
         $form->hasMany('fields', 'Bài viết', function (Form\NestedForm $form) {
-
+            
             $form->text('title', __('Tiêu đề'));
             $form->tags('keywords', __('Từ khóa'));
             $form->radio('language', __('Ngôn ngữ'))

@@ -20,7 +20,7 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="about-container">
                         <h3>@lang('page.about-us')</h3>
-                        <p>@lang('page.about-us-description')</p>
+                        <p>@lang('page.about-us-intro')</p>
                         <a class="button-default" href="/gioi-thieu">@lang('page.tim-hieu-them')</a>          
                     </div>
                 </div>
@@ -207,6 +207,11 @@
                             </div>
                         </div>
                     @endforeach
+                    @if($news->count() == 4)
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <a href="#" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -243,6 +248,11 @@
                             </div>
                         </div>
                     @endforeach
+                    @if($event->count() == 3)
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <a href="#" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
