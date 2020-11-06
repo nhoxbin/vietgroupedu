@@ -17,13 +17,13 @@ return [
 	'xem-them' => 'See more',
 	'tim-hieu-them' => 'Find more',
 	'tim-hieu-ngay' => 'Find now',
-	'thong-tin-don-hang' => 'Thông tin đơn hàng',
+	'thong-tin-don-hang' => 'Order information',
 
 	'xuat-khau-lao-dong' => 'Labor Export',
-	'di-nhat-ban' => 'Đi Nhật Bản',
-	'di-cac-nuoc-khac' => 'Đi Các Nước Khác',
+	'di-nhat-ban' => 'To Japan',
+	'di-cac-nuoc-khac' => 'To other country',
 
-	'du-hoc' => 'Study aboarch',
+	'du-hoc' => 'Study abroach',
 	'sang-cac-nuoc-khac' => 'To other country',
 	'sang-nhat' => 'To Japan',
 
