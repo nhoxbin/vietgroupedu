@@ -209,7 +209,7 @@
                     @endforeach
                     @if($news->count() == 4)
                         <div class="col-md-12 col-sm-12 text-center">
-                            <a href="#" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
+                            <a href="/tin-tuc" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
                         </div>
                     @endif
                 </div>
@@ -250,7 +250,7 @@
                     @endforeach
                     @if($event->count() == 3)
                         <div class="col-md-12 col-sm-12 text-center">
-                            <a href="#" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
+                            <a href="/su-kien" class="button-default button-large">@lang('page.xem-them') <i class="zmdi zmdi-chevron-right"></i></a>
                         </div>
                     @endif
                 </div>
