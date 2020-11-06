@@ -11,8 +11,6 @@ class PostField extends Model
     use Sluggable;
 
     protected $fillable = ['title', 'description', 'keywords', 'language', 'picture'];
-	protected $primaryKey = 'post_id';
-    public $incrementing = false;
     public $timestamps = false;
     public $table = 'posts_fields';
 
