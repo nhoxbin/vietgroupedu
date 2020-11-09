@@ -36,9 +36,9 @@ return [
 	'dich-vu' => 'Dịch vụ',
 
 	'intro' => [
-		'xuat-khau-lao-dong' => 'Trung tâm Ngoại ngữ, giáo dục và đào tạo của chúng tôi luôn dành mọi tâm huyết cũng như kiến thức, cả cơ sở vật chất tốt nhất và phương pháp giảng dạy hiệu quả để đào tạo và giáo dục các em học viên.',
+		'xuat-khau-lao-dong' => 'Công ty tập trung xuất khẩu lao động sang các nước có nhu cầu cao về nguồn nhân lực: Nhật Bản, Đài Loan, Hàn Quốc, các nước Ả rập - Vùng Vịnh.',
 		'du-hoc' => 'Trung tâm du học Vietgroup Edu là cầu nối giữa các trường học Nhật Bản với các học sinh, sinh viên Việt Nam.',
-		'dao-tao-ngoai-ngu' => 'Công ty tập trung xuất khẩu lao động sang các nước có nhu cầu cao về nguồn nhân lực: Nhật Bản, Đài Loan, Hàn Quốc, các nước Ả rập - Vùng Vịnh.',
+		'dao-tao-ngoai-ngu' => 'Trung tâm Ngoại ngữ, giáo dục và đào tạo của chúng tôi luôn dành mọi tâm huyết cũng như kiến thức, cả cơ sở vật chất tốt nhất và phương pháp giảng dạy hiệu quả để đào tạo và giáo dục các em học viên.',
 	],
 	'footer' => [
 		'office-1' => 'Trụ sở 1',
