@@ -238,7 +238,6 @@
                                 <div class="single-event-image">
                                     <a href="/su-kien/{{ $e->slug }}">
                                         <img src="{{ url('storage/' . $e->picture) }}" alt="">
-                                        <span><span>{{ date('d', strtotime($e->created_at)) }}</span>{{ date('F', strtotime($e->created_at)) }}</span>
                                     </a>
                                 </div>
                                 <div class="single-event-text">
