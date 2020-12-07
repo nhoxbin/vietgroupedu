@@ -49,16 +49,16 @@
                     <div class="single-sidebar-widget">
                         <h4 class="title">Đơn hàng gần đây</h4>
                         <div class="recent-content">
-                            @foreach($recent_post as $post)
+                            @foreach($recent_post as $postField)
                                 @php
-                                    $url = '/' . ($post->post->type ? 'don-hang' : \Str::slug($post->post->first_cate->title)) . '/' . $post->slug;
+                                    $url = '/' . ($postField->post->type ? 'don-hang' : \Str::slug($postField->post->first_cate->title)) . '/' . $postField->slug;
                                 @endphp
                                 <div class="recent-content-item">
-                                    <a href="{{ $url }}"><img src="{{ url('storage/' . $post->picture) }}" alt="recent order"></a>
+                                    <a href="{{ $url }}"><img src="{{ url('storage/' . $postField->picture) }}" alt="recent order"></a>
                                     <div class="recent-text">
                                         <h4>
                                             <a href="{{ $url }}">
-                                                {{ \Str::limit($post->title, 22) }}
+                                                {{ \Str::limit($postField->title, 22) }}
                                             </a>
                                         </h4>
                                     </div>

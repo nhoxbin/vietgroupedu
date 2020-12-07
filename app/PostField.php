@@ -26,7 +26,7 @@ class PostField extends Model
         return $this->where('language', app()->getLocale())
                     ->has('post.parent')
                     ->with(['post' => function($q) {
-                        $q->where('created_at', '>=', date('Y-m-d', strtotime("-1 week")))->get();
+                        $q->orderBy('created_at', 'desc')->get();
                     }])->limit(5)->get();
     }
 
