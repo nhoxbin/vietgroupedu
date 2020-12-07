@@ -31,13 +31,13 @@
                         <thead>
                           @if($cate->slug === 'xuat-khau-lao-dong')
                               <tr>
-                                <th>@lang('table.tieu-de')</th>
-                                <th>@lang('table.muc-luong')</th>
-                                <th>@lang('table.ngay-phong-van')</th>
+                                <th>@lang('page.tieu-de')</th>
+                                <th>@lang('page.muc-luong')</th>
+                                <th>@lang('page.ngay-phong-van')</th>
                               </tr>
                           @else
                               <tr>
-                                  <th>@lang('table.tieu-de')</th>
+                                  <th>@lang('page.tieu-de')</th>
                               </tr>
                           @endif
                         </thead>
@@ -48,7 +48,7 @@
                                 <td>
                                   <a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
                                   <p style="margin: 15px 0px 5px;font-size: 12px;">
-                                      <i class="fa fa-map-marker"></i> {{ $post->field->work_place }} | @lang('table.profile-deadline'): <i class="fa fa-calendar"></i> {{ $post->field->expired }}
+                                      <i class="fa fa-map-marker"></i> {{ $post->field->work_place }} | @lang('page.han-nop-ho-so'): <i class="fa fa-calendar"></i> {{ $post->field->expired }}
                                   </p>
                                 </td>
                                 <td>{{ number_format($post->field->income) }}đ</td>
@@ -56,7 +56,7 @@
                               </tr>
                             @else
                               <tr>
-                                <td><a href="{{ $child->slug . '/' . $post->slug }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
+                                <td><a href="{{ $child->slug . '/' . $post->field->slug }}"><h6>{{ $post->field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
                               </tr>
                             @endif
                           @endforeach

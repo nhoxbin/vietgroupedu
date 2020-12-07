@@ -44,6 +44,10 @@ class Posts extends Model
         return $this->getFirstCateTitle($this);
     }
 
+    public function getFieldAttribute() {
+        return $this->hasMany('App\PostField', 'post_id')->where('language', app()->getLocale())->first();
+    }
+
     public function fields() {
         return $this->hasMany('App\PostField', 'post_id');
     }
