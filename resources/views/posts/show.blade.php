@@ -10,7 +10,7 @@
                    <div class="single-latest-item">
                         <img src="{{ url('storage/'.$post->picture) }}" alt="">  
                         <div class="single-latest-text">
-                            <h3>{{ $post->title }}</h3> 
+                            <h3>{{ $post->title }}</h3>
                             {{-- @if($post->)
                                 <div class="quote-section">
                                     <p>but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
