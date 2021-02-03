@@ -17,19 +17,19 @@ class HomeController extends Controller
         $posts = new Posts;
         $orders = PostField::where('language', app()->getLocale())->has('post.order')->get();
         $news = PostField::where('language', app()->getLocale())
-                        ->doesntHave('post.order')
-                        ->whereHas('post', function($q) {
-                            $q->whereHas('parent', function($p) {
-                                $p->where('slug', 'tin-tuc');
-                            });
-                        })->limit(4)->get();
+            ->doesntHave('post.order')
+            ->whereHas('post', function($q) {
+                $q->whereHas('parent', function($p) {
+                    $p->where('slug', 'tin-tuc');
+                });
+            })->limit(4)->orderBy('created_at', 'desc')->get();
         $event = PostField::where('language', app()->getLocale())
-                            ->doesntHave('post.order')
-                            ->whereHas('post', function($q) {
-                                $q->whereHas('parent', function($p) {
-                                    $p->where('slug', 'su-kien');
-                                });
-                            })->limit(3)->get();
+            ->doesntHave('post.order')
+            ->whereHas('post', function($q) {
+                $q->whereHas('parent', function($p) {
+                    $p->where('slug', 'su-kien');
+                });
+            })->limit(3)->orderBy('created_at', 'desc')->get();
         return view('home', compact('orders', 'news', 'event'));
     }
 }
