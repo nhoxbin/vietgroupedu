@@ -16,20 +16,20 @@ class HomeController extends Controller
     public function index() {
         $posts = new Posts;
         $orders = PostField::where('language', app()->getLocale())->has('post.order')->get();
-        $news = PostField::where(['language' => app()->getLocale(), 'post' => function($q) {
-                $q->orderBy('created_at', 'desc');
-            }])->doesntHave('post.order')->whereHas('post', function($q) {
+        $news = PostField::where('language', app()->getLocale())
+            ->doesntHave('post.order')
+            ->whereHas('post', function($q) {
                 $q->whereHas('parent', function($p) {
                     $p->where('slug', 'tin-tuc');
                 });
-            })->limit(4)->get();
-        $event = PostField::where(['language' => app()->getLocale(), 'post' => function($q) {
-                $q->orderBy('created_at', 'desc');
-            }])->doesntHave('post.order')->whereHas('post', function($q) {
+            })->orderBy('post.created_at', 'desc')->limit(4)->get();
+        $event = PostField::where('language', app()->getLocale())
+            ->doesntHave('post.order')
+            ->whereHas('post', function($q) {
                 $q->whereHas('parent', function($p) {
                     $p->where('slug', 'su-kien');
                 });
-            })->limit(3)->get();
+            })->orderBy('post.created_at', 'desc')->limit(3)->get();
         return view('home', compact('orders', 'news', 'event'));
     }
 }
