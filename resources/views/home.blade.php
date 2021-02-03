@@ -194,15 +194,15 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="single-latest-item">
                                 <div class="single-latest-image">
-                                    <a href="/tin-tuc/{{ $new->slug }}"><img src="{{ url('storage/'.$new->picture) }}" alt=""></a>
+                                    <a href="/tin-tuc/{{ $new->fields[0]->slug }}"><img src="{{ url('storage/'.$new->fields[0]->picture) }}" alt=""></a>
                                 </div>
                                 <div class="single-latest-text">
-                                    <h3><a href="/tin-tuc/{{ $new->slug }}">{{ \Str::limit($new->title, 40) }}</a></h3>
+                                    <h3><a href="/tin-tuc/{{ $new->fields[0]->slug }}">{{ \Str::limit($new->fields[0]->title, 40) }}</a></h3>
                                     <div class="single-item-comment-view">
-                                       <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->post->created_at)) }}</span>
+                                       <span><i class="zmdi zmdi-calendar-check"></i>{{ date('d-m-Y', strtotime($new->fields[0]->post->created_at)) }}</span>
                                    </div>
                                    <p>&nbsp;</p>
-                                   <a href="/tin-tuc/{{ $new->slug }}" class="button-default">Xem ngay</a>
+                                   <a href="/tin-tuc/{{ $new->fields[0]->slug }}" class="button-default">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -236,13 +236,13 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <div class="single-event-item">
                                 <div class="single-event-image">
-                                    <a href="/su-kien/{{ $e->slug }}">
-                                        <img src="{{ url('storage/' . $e->picture) }}" alt="">
+                                    <a href="/su-kien/{{ $e->fields[0]->slug }}">
+                                        <img src="{{ url('storage/' . $e->fields[0]->picture) }}" alt="">
                                     </a>
                                 </div>
                                 <div class="single-event-text">
-                                    <h3><a href="/su-kien/{{ $e->slug }}">{{ $e->title }}</a></h3>
-                                   <a class="button-default" href="/su-kien/{{ $e->slug }}">Xem ngay</a>
+                                    <h3><a href="/su-kien/{{ $e->fields[0]->slug }}">{{ $e->fields[0]->title }}</a></h3>
+                                   <a class="button-default" href="/su-kien/{{ $e->fields[0]->slug }}">Xem ngay</a>
                                 </div>
                             </div>
                         </div>
