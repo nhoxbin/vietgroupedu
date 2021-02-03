@@ -21,15 +21,15 @@ class HomeController extends Controller
             ->whereHas('post', function($q) {
                 $q->whereHas('parent', function($p) {
                     $p->where('slug', 'tin-tuc');
-                });
-            })->limit(4)->orderBy('created_at', 'desc')->get();
+                })->orderBy('created_at', 'desc');
+            })->limit(4)->get();
         $event = PostField::where('language', app()->getLocale())
             ->doesntHave('post.order')
             ->whereHas('post', function($q) {
                 $q->whereHas('parent', function($p) {
                     $p->where('slug', 'su-kien');
-                });
-            })->limit(3)->orderBy('created_at', 'desc')->get();
+                })->orderBy('created_at', 'desc');
+            })->limit(3)->get();
         return view('home', compact('orders', 'news', 'event'));
     }
 }
