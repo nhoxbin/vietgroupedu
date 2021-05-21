@@ -18,7 +18,7 @@ class ContactController extends Controller
         $data = $request->input('name', 'email', 'phone', 'message');
         try {
             Mail::to(config('mail.mailers.smtp.username'))->send(new SendMail($data));
-        } catch(\Exeption $e) {
+        } catch(\Exception $e) {
             return response('Fail to send Mail!', 500);
         }
         if ($request->ajax()) {
