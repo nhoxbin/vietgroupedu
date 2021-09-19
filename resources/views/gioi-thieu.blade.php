@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="skill-image">
-                        <img src="img/banner/6.jpg" alt="">
+                        <img src="{{ asset('storage/website/introduce.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                             <h3>Skills and Experience</h3>
                             <p>There are many variations of passages</p>
                         </div>
-                    </div> 
-                </div>       
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
@@ -93,8 +93,8 @@
                                     <span class="text-top">70%</span>
                                 </div>
                             </div>
-                        </div>  
-                    </div>    
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <div class="experience-skill-wrapper">
@@ -130,7 +130,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
