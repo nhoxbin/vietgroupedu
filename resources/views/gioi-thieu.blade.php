@@ -33,8 +33,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12">
-                    <div class="about-text-container">
-                        <p>@lang('introduce.intro')</p>
+                    <div class="about-text-container" style="font-size: 120%;">
+                        @lang('introduce.intro')
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
@@ -226,4 +226,9 @@
         </div>
     </div> --}}
     <!--End of Teachers Area-->
+    <style>
+        ul li:before {
+            content: '✓';
+        }
+    </style>
 @endsection
