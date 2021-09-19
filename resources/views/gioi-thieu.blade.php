@@ -227,7 +227,7 @@
     </div> --}}
     <!--End of Teachers Area-->
     <style>
-        ul li:before {
+        ul#phuongcham li:before {
             content: '✓';
         }
     </style>

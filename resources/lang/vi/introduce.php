@@ -12,7 +12,7 @@ return [
 
 		<div class="d-flex flex-column justify-content-center">
 	        <span style="text-align: center; font-size: 120%; color: blue;">PHƯƠNG CHÂM</span>
-	        <ul class="d-flex flex-column justify-content-center" style="list-style: none;">
+	        <ul id="phuongcham" class="d-flex flex-column justify-content-center" style="list-style: none;">
 	            <li class="mr-auto">BÉN NHẠY</li>
 	            <li class="flex-wrap">BỨC PHÁ</li>
 	            <li>BỀN TRÍ</li>
