@@ -43,16 +43,16 @@
                         </thead>
                         <tbody>
                           @foreach($child->posts as $post)
-                            @if($post->type == 1)
+                            @if($post->type == 1 && $post->field->title)
                               <tr>
                                 <td>
-                                  <a href="{{ $post->parents_tree }}"><h6>{{ $post->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
+                                  <a href="/don-hang/{{ $post->field->slug }}"><h6>{{ $post->field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a>
                                   <p style="margin: 15px 0px 5px;font-size: 12px;">
-                                      <i class="fa fa-map-marker"></i> {{ $post->field->work_place }} | @lang('page.han-nop-ho-so'): <i class="fa fa-calendar"></i> {{ $post->field->expired }}
+                                    <i class="fa fa-map-marker"></i> {{ $post->order->work_place }} | @lang('page.han-nop-ho-so'): <i class="fa fa-calendar"></i> {{ $post->order->expired }}
                                   </p>
                                 </td>
-                                <td>{{ number_format($post->field->income) }}đ</td>
-                                <td>{{ $post->field->interview }}</td>
+                                <td>{{ number_format($post->order->income) }}đ</td>
+                                <td>{{ $post->order->interview }}</td>
                               </tr>
                             @else
                               <tr>

@@ -21,7 +21,7 @@
                     <div class="about-container">
                         <h3>@lang('page.about-us')</h3>
                         <p>@lang('page.about-us-intro')</p>
-                        <a class="button-default" href="/gioi-thieu">@lang('page.tim-hieu-them')</a>          
+                        <a class="button-default" href="/gioi-thieu">@lang('page.tim-hieu-them')</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                                    <i class="zmdi zmdi-star"></i>
                                    <i class="zmdi zmdi-star-half"></i>
                                </div>
-                            </div>   
+                            </div>
                         </div>
                         <div class="button-bottom">
                             <a href="/xuat-khau-lao-dong" class="button-default">@lang('page.tim-hieu-ngay')</a>
@@ -86,7 +86,7 @@
                                    <i class="zmdi zmdi-star"></i>
                                    <i class="zmdi zmdi-star-half"></i>
                                </div>
-                            </div>   
+                            </div>
                         </div>
                         <div class="button-bottom">
                             <a href="/du-hoc" class="button-default">@lang('page.tim-hieu-ngay')</a>
@@ -114,7 +114,7 @@
                                    <i class="zmdi zmdi-star"></i>
                                    <i class="zmdi zmdi-star-half"></i>
                                </div>
-                            </div>   
+                            </div>
                         </div>
                         <div class="button-bottom">
                             <a href="/dao-tao-ngoai-ngu" class="button-default">@lang('page.tim-hieu-ngay')</a>
@@ -175,8 +175,8 @@
             </div>
         </div>
     </div>
-    <!--End of Fun Factor Area-->   
-    <!--Latest News Area Start--> 
+    <!--End of Fun Factor Area-->
+    <!--Latest News Area Start-->
     @if($news->count())
         <div class="latest-area section-padding bg-white">
             <div class="container">

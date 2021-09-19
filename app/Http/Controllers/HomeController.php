@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __construct() {
-        // $this->middleware('auth');
-    }
-
     public function index() {
         $posts = new Posts;
         $orders = PostField::where('language', app()->getLocale())->has('post.order')->get();
@@ -27,7 +23,7 @@ class HomeController extends Controller
         }])->whereHas('parent', function($q) {
             $q->where('slug', 'su-kien');
         })->doesntHave('order')->orderBy('created_at', 'desc')->limit(3)->get();
-        
+
         return view('home', compact('orders', 'news', 'event'));
     }
 }
