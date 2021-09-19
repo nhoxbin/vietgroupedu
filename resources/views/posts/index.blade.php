@@ -56,7 +56,9 @@
                               </tr>
                             @else
                               <tr>
-                                <td colspan="3"><a href="{{ $child->slug . '/' . $post->field->slug }}"><h6>{{ $post->field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
+                                <td><a href="{{ $child->slug . '/' . $post->field->slug }}"><h6>{{ $post->field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
+                                <td></td>
+                                <td></td>
                               </tr>
                             @endif
                           @endforeach
