@@ -19,12 +19,12 @@ return [
 	            <li>BẢN LĨNH</li>
 	        </ul>
 	    </div>
-	    <br /><br />
+	    <br />
         <div class="d-flex flex-wrap justify-content-center">
             <span style="font-size: 120%; color: blue;">SỨ MỆNH</span>
             <p style="font-family: \'Times New Roman\', Times, serif; text-indent: 2rem;">Vietgroup Edu là tổ chức chuyên về đào tạo – huấn luyện nguồn nhân lực có chất lượng cao nhằm đáp ứng các nhu cầu thực tiễn của thị trường lao động trong và ngoài nước; song song với việc là cầu nối chuyển giao tri thức công nghệ trong các lĩnh vực mà xã hội quan tâm và hướng đến.</p>
         </div>
-        <br /><br />
+        <br />
         <div class="d-flex flex-wrap justify-content-center">
             <span style="font-size: 120%; color: blue;">TẦM NHÌN</span>
             <p style="font-family: \'Times New Roman\', Times, serif; text-indent: 2rem;">Trở thành tập đoàn chuyên nghiệp hàng đầu trong lĩnh vực tư vấn - giáo dục - công nghệ. Là nơi đóng góp các giải pháp mang tính đột phá trong việc phát triển các yếu tố nhân lực cho nước nhà.</p>
