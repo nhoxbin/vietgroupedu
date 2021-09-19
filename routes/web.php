@@ -2,13 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'artisan/{password}'], function() {
-    Route::get('{command}', function($password, $command) {
-		if ($password === 'buudaica') {
-	        $exitCode = \Artisan::call($command, []);
-	        echo $exitCode;
-		}
-    });
+Route::prefix('artisan/{password}/{command}', function($password, $command) {
+	if ($password === 'Ff901ye8uD') {
+		$exitCode = \Artisan::call($command, request()->all());
+		echo $exitCode;
+	}
 });
 
 Route::group(['middleware' => 'locale'], function() {
