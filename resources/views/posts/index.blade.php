@@ -57,8 +57,10 @@
                             @else
                               <tr>
                                 <td><a href="{{ $child->slug . '/' . $post->field->slug }}"><h6>{{ $post->field->title }}<img src="/app/img/posts/new.gif" alt="New"></h6></a></td>
-                                <td></td>
-                                <td></td>
+                                @if ($post->type == 1)
+                                  <td></td>
+                                  <td></td>
+                                @endif
                               </tr>
                             @endif
                           @endforeach
